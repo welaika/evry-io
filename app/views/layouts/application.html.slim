@@ -11,11 +11,8 @@ html
   body.evry
     = render 'navbar'
 
-    - if current_page?(root_url)
+    .ui.one.column.page.grid
       = yield
-    - else
-      .ui.one.column.page.grid
-        = yield
 
     = render 'footer'
     

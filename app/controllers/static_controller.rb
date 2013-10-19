@@ -1,5 +1,6 @@
 class StaticController < ApplicationController
   def welcome
+    render 'welcome', layout: 'homepage'
   end
 
   def logged
