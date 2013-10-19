@@ -1,4 +1,13 @@
-h1 New task
+.main.container.taskindex.ui.grid
+    header.row
+      .sixteen.wide.column
+        .ui.segment
+          h1.gamma New task
 
-= render "form", task: @task
+    .row
+      .twelve.wide.column
+        .ui.segment
+          = render "form", task: @task
 
+      .four.wide.column
+        = render 'sidebar'

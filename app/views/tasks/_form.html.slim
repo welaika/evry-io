@@ -1,6 +1,24 @@
-= simple_form_for @task do |task|
-  = task.input :action
-  = task.input :description
-  = task.input :time_expression
-  = task.button :submit
+.ui.form = simple_form_for @task do |task|
+  .ui.error.message
+    .header= task.error_notification
 
+  .field
+    = task.label :action
+    .ui.input
+      = task.input_field :action, placeholder: ""
+      .ui.corner.label
+        i.icon.asterisk
+  .field
+    = task.label :description
+    .ui.input
+      = task.input_field :description
+      .ui.corner.label
+        i.icon.asterisk
+  .field
+    = task.label :time_expression
+    .ui.input
+      = task.input_field :time_expression
+      .ui.corner.label
+        i.icon.asterisk
+
+  = task.button :submit, "Create Task", class: 'ui teal submit button'
