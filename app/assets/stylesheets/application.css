@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require semantic-ui
+ *= require semantic-ui-fixes
  *= require common
  *= require tasks
  */
