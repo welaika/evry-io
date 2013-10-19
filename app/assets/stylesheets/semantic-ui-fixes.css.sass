@@ -1,12 +1,23 @@
+@mixin black-text-shadow()
+  text-shadow: 1px 1px black
+
+@mixin gray-text-shadow()
+  text-shadow: 1px 1px gray
+
+@mixin white-text-shadow()
+  text-shadow: 1px 1px white
+
+
 .ui
   &.button
-    text-shadow: 1px 1px gray
+    +gray-text-shadow()
   &.icon.header
-    text-shadow: 1px 1px white
-  &.inverted
-    text-shadow: 1px 1px black
+    +white-text-shadow()
+  &.inverted,
+  &.message
+    +black-text-shadow()
   &.label
-    text-shadow: 1px 1px gray
+    +gray-text-shadow()
     
   &.grid
     .aligned
