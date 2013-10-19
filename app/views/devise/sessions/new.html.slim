@@ -1,0 +1,60 @@
+.ui.grid
+  header.row
+    .sixteen.wide.column
+      .ui.segment
+        h1
+          | Titolo
+  .row
+    .one.wide.column
+    .fourteen.wide.column
+      .ui.basic.form.segment= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .field
+          = f.label :email
+          .ui.left.labeled.icon.input
+            / input placeholder="Username" type="text"
+            = f.input_field :email, placeholder: "Your email"
+            i.mail.icon
+            .ui.corner.label
+              i.icon.asterisk
+        .field
+          = f.label :password
+          .ui.left.labeled.icon.input
+            = f.input_field :password
+            i.lock.icon
+            .ui.corner.label
+              i.icon.asterisk
+        .ui.error.message
+          .header We noticed some issues
+        .ui.blue.submit.button Login
+  .row
+
+
+
+  / .field
+  /   = f.label :email
+  /   .ui.left.labeled.icon.input
+  /     = f.input_field :email, :required => false, :autofocus => true
+  /     i.user.icon
+  /     .ui.corner.label
+  /       i.icon.asterisk
+
+    
+  / .field
+  /   .ui.left.labeled.icon.input
+  /     = f.input :password, :required => false
+  /   i.lock.icon
+  /   .ui.corner.label
+  /     i.icon.asterisk
+  
+  / .field
+  /   = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
+
+  / .ui.error.message
+  /   .header We noticed some issues
+  / .ui.blue.submit.button Login
+
+
+  / .form-actions
+  /   = f.button :submit, "Sign in"
+
+= render "devise/shared/links"
