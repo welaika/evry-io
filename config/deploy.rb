@@ -59,7 +59,7 @@ set :admin_runner,               "www-data"
 #
 # 3. Uncomment the below ssh_options[:keys] line in this file.
 #
-# ssh_options[:keys] = ["~/.ssh/id_rsa"]
+ssh_options[:keys] = ["~/.ssh/id_rsa"]
 
 # SCM Options
 set :scm,        :git
