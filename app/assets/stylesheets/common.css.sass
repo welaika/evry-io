@@ -65,6 +65,17 @@ body
       table.notifications
         td.field
           font-weight: bold
+    
+    .task
+      &.done
+        .description
+          text-decoration: line-through
+      .set_task_state,
+      .delete_button,
+      .edit_button:hover
+        cursor: pointer
+        text-decoration: none
+
     #sidebar
       padding-left: 0
 

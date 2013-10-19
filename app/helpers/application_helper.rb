@@ -31,4 +31,16 @@ module ApplicationHelper
     }
   end
 
+  def vertical_menu_icon_link(title, icon, url, options = {})
+    link_to url, options.merge(class: 'item') do
+      content_tag(:i, "", class: "icon #{icon}") + title
+    end
+  end
+
+  def ui_icon_only_link(icon, url, options = {})
+    link_to url, options do
+      content_tag(:i, "", class: "icon #{icon}")
+    end
+  end
+
 end

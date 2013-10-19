@@ -5,10 +5,11 @@
 $(document).ready ->
   $('.popup').tipr()
 
-  $(".deleteButton").click ->
+  $(".delete_button").click ->
 
-    task = $(this).data("task")
-    console.log task
+    $task = $(this).parents('.task')
+    task_id = $task.data("task-id")
+
     $(".basic.modal").modal("setting", "onDeny", ->
       console.log "denied"
       alert "Denied to delete id task " + task
@@ -18,23 +19,16 @@ $(document).ready ->
     ).modal "show"
     false
 
-  $(".deleteSingleTask").click ->
+  $(".set_task_state").click ->
 
-    task = $(this).data("task")
-    console.log task
-    $(".basic.modal").modal("setting", "onDeny", ->
-      console.log "denied"
-      alert "Denied to delete id task " + task
-    ).modal("setting", "onApprove", ->
-      console.log "approved"
-      alert "Approved to delete id task " + task
-    ).modal "show"
-    false
+    $task = $(this).parents('.task')
+    task_id = $task.data("task-id")
 
-  $(".doneCheckbox").click ->
-
-    task = $(this).data("task")
-    console.log task
-    if $(this).children("i").hasClass('empty')
+    if !$task.hasClass('done')
       $(this).children("i").removeClass('empty').addClass('checked')
+      $task.addClass('done')
+    else if $task.hasClass('done')
+      $(this).children("i").removeClass('checked').addClass('empty')
+      $task.removeClass('done')
+
       

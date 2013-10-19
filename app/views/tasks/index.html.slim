@@ -3,16 +3,48 @@
       .sixteen.wide.column
         .ui.segment
           h1.gamma Task index
-          h2= link_to 'New Task', new_task_path
 
     .row
       .twelve.wide.column
-        .ui.segment
-          ul
+        table.ui.table.segment
+          thead
+            tr
+              th
+              th.eleven.wide Description
+              th.two.wide Next Reminder
+              th.three.wide Actions
+          tbody.tasks
             - @tasks.each do |task|
-              li
-                = link_to task.action, task_path(task)
-                = link_to 'delete', task_path(task), method: :delete, data: { confirm: 'Are you sure?' }
+              tr.task[data-task-id="#{task.id}"]
+                td
+                  a.set_task_state
+                    i.large.empty.checkbox.icon
+                td.description= task.action
+                td
+                  span.popup[data-tip="#{task.recurrence.next_at.strftime('%d %B %Y')}"]
+                    = distance_of_time_in_words(Time.now, task.recurrence.next_at)
+                td
+                  a.delete_button heref="#"
+                    i.large.remove.icon
+                  = ui_icon_only_link 'large edit', task, class: 'edit_button'
 
       #sidebar.four.wide.column
         = render 'sidebar'
+
+.ui.basic.modal
+  .header
+    | Delete your task
+  .content
+    .left
+      i.remove.sign.icon
+    .right
+      p
+        | Are you sure you want to delete this task?
+  .actions
+    .two.fluid.ui.buttons
+      .ui.negative.labeled.icon.button
+        i.remove.icon
+        | No
+      .ui.positive.right.labeled.icon.button
+        | Yes
+        i.checkmark.icon
