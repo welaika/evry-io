@@ -3,6 +3,9 @@
     .brand
       i.time.icon
       | Evry
+  - if user_signed_in?
+    .item
+      = link_to "Tasks", tasks_path
   .right.menu
     - if user_signed_in?
       .item
