@@ -17,7 +17,7 @@ describe CreateTask do
   context "add recurrence" do
     let(:task) { stub(id: 666, time_expression: 'time expression', errors: errors) }
     let(:errors) { stub }
-    let(:service) { AddRecurrence.new(task) }
+    let(:service) { CreateTask::AddRecurrence.new(task) }
     let(:result) { stub_everything }
 
     before do
@@ -39,12 +39,12 @@ describe CreateTask do
       let(:moment) { Time.parse("2013-10-20 13:13:25") }
 
       let(:result) do
-        OpenStruct.new({
+        {
           expression: "day",
           starting: moment,
           next: moment,
           until: moment
-        })
+        }
       end
 
       before do
