@@ -1,0 +1,20 @@
+- autofocus ||= false
+
+.ui.form.segment= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  .field
+    = f.label :email
+    .ui.left.labeled.icon.input
+      = f.input_field :email, placeholder: "Your email", autofocus: autofocus
+      i.mail.icon
+      .ui.corner.label
+        i.icon.asterisk
+  .field
+    = f.label :password
+    .ui.left.labeled.icon.input
+      = f.input_field :password
+      i.lock.icon
+      .ui.corner.label
+        i.icon.asterisk
+  .ui.error.message
+    .header We noticed some issues
+  = f.button :submit, "Sign in", class: 'ui blue submit button'

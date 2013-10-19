@@ -2,23 +2,21 @@
   header.row
     .sixteen.wide.column
       .ui.segment
-        h1.gamma Sign In
+        h1.gamma Sign Up
   .row
     .sixteen.wide.column
     .eight.wide.column
-      = render 'devise/shared/sign_in', autofocus: true
+      = render 'devise/shared/sign_up', autofocus: true
     .eight.wide.column
       .ui.segment
         .row
           .sixteen.wide.column
-            h1.delta Don't you have an account? Register or try it for free
+            h1.delta Do you alredy have an account?
             p asdasdasdasdaasd
         .row
           .sixteen.wide.center.aligned.column
             .ui.buttons
-              = ui_button "Sign Up", new_user_registration_path, "orange"
-              .or
-              = ui_button "Try It", "#", "green"
+              = ui_button "Sign In", new_user_session_path, "teal"
 
     / .eight.wide.column
     /   = render 'devise/shared/sign_up', autofocus: true

@@ -1,0 +1,28 @@
+- autofocus ||= false
+
+.ui.form.segment= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  .ui.error.message
+    .header= f.error_notification
+  .field
+    = f.label :email, required: true, :autofocus => autofocus 
+    .ui.left.labeled.icon.input
+      / input placeholder="Username" type="text"
+      = f.input_field :email, placeholder: "Your email"
+      i.mail.icon
+      .ui.corner.label
+        i.icon.asterisk
+  .field
+    = f.label :password
+    .ui.left.labeled.icon.input
+      = f.input_field :password, required: true, placeholder: "Choose a password"
+      i.lock.icon
+      .ui.corner.label
+        i.icon.asterisk
+  .field
+    = f.label :password_confirmation
+    .ui.left.labeled.icon.input
+      = f.input_field :password_confirmation, required: true, placeholder: "Confirm your password"
+      i.lock.icon
+      .ui.corner.label
+        i.icon.asterisk
+  = f.button :submit, "Sign Up", class: 'ui blue submit button'
