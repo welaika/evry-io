@@ -7,9 +7,33 @@
     .row
       .twelve.wide.column
         .ui.segment
-          p= @task.recurrence.expression
-          p= @task.recurrence.next_at
+          .ui.form
+            .field
+              .ui.massive.input
+                input type="text" placeholder="Insert your moment" value="#{@task.time_expression}"
+            .field
+              p I want to
+            .field
+              .ui.massive.input
+                input type="text" placeholder="Insert your action" value="#{@task.action}"
+          .ui.horizontal.icon.divider
+            i.circular.calendar.icon
+          table.ui.basic.table.notifications
+            tbody
+              tr
+                td.field Last reminder
+                td.value
+                  - if @task.recurrence.last_at
+                    span.popup data-tip="16 November 2013"
+                      = distance_of_time_in_words(Time.now, @task.recurrence.next_at)
+                  - else
+                    span Not yet reminded
+              tr
+                td.field Next reminder in
+                td.value
+                  span.popup data-tip="#{@task.recurrence.next_at.strftime('%d %B %Y')}"
+                    = distance_of_time_in_words(Time.now, @task.recurrence.next_at)
 
       .four.wide.column
-        = render 'sidebar'
+        = render 'sidebar', action: :show
 
