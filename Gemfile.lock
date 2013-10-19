@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:Arkham/semantic-ui-rails.git
-  revision: 059409b39a8d9e607e5ff3c37132c0bb4cd0aa92
+  revision: 8e679bed7e5a19fb4d708fe05000610644d690fb
   specs:
     semantic-ui-rails (0.3.5)
       less-rails
