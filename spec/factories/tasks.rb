@@ -1,9 +1,8 @@
-# Read about factories at https://github.com/thoughtbot/factory_girl
-
 FactoryGirl.define do
   factory :task do
-    user nil
-    title "MyString"
-    description "MyText"
+    user
+    action "code hard"
+    time_expression "every day"
+    description "Coding hard is fun!"
   end
 end
