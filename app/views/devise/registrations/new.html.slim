@@ -12,13 +12,13 @@
         .row
           .sixteen.wide.column
             h1.delta Do you alredy have an account?
-            p asdasdasdasdaasd
+            p
+              | Whoops! We are glad for all this interest from you, but maybe you are on the wrong page! 
+            p
+              em Go to Sign in! :)
         .row
           .sixteen.wide.center.aligned.column
-            .ui.buttons
+            .ui.buttons.medium
               = ui_button "Sign In", new_user_session_path, "teal"
-
-    / .eight.wide.column
-    /   = render 'devise/shared/sign_up', autofocus: true
 
 = render "devise/shared/links"

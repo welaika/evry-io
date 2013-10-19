@@ -11,16 +11,19 @@
       .ui.segment
         .row
           .sixteen.wide.column
-            h1.delta Don't you have an account? Register or try it for free
-            p asdasdasdasdaasd
+            h1.delta Don't you have an account? Register or try it! ( for free, no strings attached)
+            p
+              | Are you ready for getting reminder for your cyclical events?
+              em Sign Up now to start receiving notifications!
+            p
+              | Not ready? You can 
+              em
+                | try it! 
         .row
           .sixteen.wide.center.aligned.column
             .ui.buttons
-              = ui_button "Sign Up", new_user_registration_path, "orange"
+              = ui_button "Sign Up", new_user_registration_path, "orange medium"
               .or
-              = ui_button "Try It", "#", "green"
-
-    / .eight.wide.column
-    /   = render 'devise/shared/sign_up', autofocus: true
+              = ui_button "Try It", "#", "green medium"
 
 = render "devise/shared/links"

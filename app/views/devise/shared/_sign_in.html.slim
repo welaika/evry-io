@@ -1,6 +1,9 @@
 - autofocus ||= false
 
 .ui.form.segment= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  .ui.error.message
+    .header= f.error_notification
+
   .field
     = f.label :email
     .ui.left.labeled.icon.input
@@ -17,4 +20,4 @@
         i.icon.asterisk
   .ui.error.message
     .header We noticed some issues
-  = f.button :submit, "Sign in", class: 'ui teal submit button'
+  = f.button :submit, "Sign In", class: 'ui teal submit large button right floated'
