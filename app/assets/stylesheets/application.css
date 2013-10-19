@@ -11,4 +11,5 @@
  *= require_self
  *= require semantic-ui
  *= require common
+ *= require tasks
  */
