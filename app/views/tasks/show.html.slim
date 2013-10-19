@@ -1,8 +1,15 @@
-h2= "Task #{@task.action}"
+.main.container.taskindex.ui.grid
+    header.row
+      .sixteen.wide.column
+        .ui.segment
+          h1.gamma= "Task #{@task.action}"
 
-p= @task.description
+    .row
+      .twelve.wide.column
+        .ui.segment
+          p= @task.description
+          p= @task.recurrence.expression
+          p= @task.recurrence.next_at
 
-p= @task.recurrence.expression
-
-p= @task.recurrence.next_at
-
+      .four.wide.column
+        = render 'sidebar'
