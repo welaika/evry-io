@@ -12,7 +12,7 @@
             - @tasks.each do |task|
               li
                 = link_to task.action, task_path(task)
-                = link_to 'delete', task_path(task), method: :delete, confirm: 'Are you sure?'
+                = link_to 'delete', task_path(task), method: :delete, data: { confirm: 'Are you sure?' }
 
       .four.wide.column
         = render 'sidebar'
