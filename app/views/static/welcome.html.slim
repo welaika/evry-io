@@ -5,9 +5,9 @@
       p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in erat eget turpis sagittis volutpat. Nullam feugiat sodales mi, ac eleifend nisi tincidunt id. Morbi consectetur aliquam mollis. Donec dapibus tristique rutrum. Nam nec mollis mauris. Proin eu commodo sapien. In eleifend et nunc sit amet lacinia. Proin elementum turpis eu libero scelerisque, at hendrerit est ornare. Proin dictum, ligula sit amet rhoncus cursus, nisl ligula volutpat tortor, et ornare magna tellus sit amet justo. Suspendisse tempus massa felis, vel auctor nisl pellentesque in. Maecenas sit amet aliquam mi. Donec vitae sapien et lorem varius interdum non id lorem.
 
       .ui.buttons.huge
-        .ui.teal.button Sign In
+        = ui_button "Sign In", new_user_session_path, "teal"
         .or
-        .ui.green.button Try It
+        = ui_button "Try It", "#", "green"
 
 .ui.four.column.middle.aligned.page.grid.feature-list
   .center.aligned.column

@@ -5,4 +5,6 @@
       | Evry
   .right.menu
     .item
-      a.ui.teal.button href="#" Sign In
+      = ui_button "Logut", destroy_user_session_path(:user), "teal", method: :delete
+    .item
+      = ui_button "Sign In", new_user_session_path, "teal"
