@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019204129) do
+ActiveRecord::Schema.define(version: 20131019211442) do
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -66,6 +66,8 @@ ActiveRecord::Schema.define(version: 20131019204129) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "time_zone"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -1,6 +1,6 @@
 Evry::Application.routes.draw do
   authenticated :user do
-    root :to => "tasks#index"
+    root to: "tasks#index"
   end
   unauthenticated :user do
     devise_scope :user do
@@ -14,8 +14,7 @@ Evry::Application.routes.draw do
   get '/static/list' => 'static#list'
   get '/static/edit' => 'static#edit'
 
-
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
   resources :tasks
 end

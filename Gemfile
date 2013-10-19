@@ -18,6 +18,7 @@ gem 'therubyracer'
 gem 'tickle', git: 'git@github.com:matjack1/tickle.git'
 gem 'delayed_job_active_record'
 gem 'simple_form'
+gem 'omniauth-github'
 
 # assets
 gem 'sass-rails', '~> 4.0.0'
