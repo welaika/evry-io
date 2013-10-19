@@ -27,6 +27,8 @@ gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'less-rails'
 gem 'semantic-ui-rails'
+gem 'detect_timezone_rails'
+gem 'jquery-cookie-rails'
 
 group :development do
   gem 'better_errors'
