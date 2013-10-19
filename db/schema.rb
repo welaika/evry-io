@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019211442) do
+ActiveRecord::Schema.define(version: 20131019230600) do
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20131019211442) do
   end
 
   add_index "recurrences", ["task_id"], name: "index_recurrences_on_task_id", using: :btree
+
+  create_table "sessions", force: true do |t|
+    t.string   "session_id", default: "", null: false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
 
   create_table "tasks", force: true do |t|
     t.integer  "user_id"

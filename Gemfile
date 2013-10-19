@@ -19,6 +19,7 @@ gem 'tickle', git: 'git@github.com:matjack1/tickle.git'
 gem 'delayed_job_active_record'
 gem 'simple_form'
 gem 'omniauth-github'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 # assets
 gem 'sass-rails', '~> 4.0.0'
