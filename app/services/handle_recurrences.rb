@@ -1,4 +1,8 @@
 class HandleRecurrences
+  def self.perform
+    new.perform
+  end
+
   def recurrences
     Recurrence.ready
   end
