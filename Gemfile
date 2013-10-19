@@ -10,6 +10,10 @@ gem 'protected_attributes'
 gem 'devise'
 gem 'jbuilder', '~> 1.2'
 gem 'turbolinks'
+gem 'cancan'
+gem 'inherited_resources'
+gem 'has_scope'
+gem 'responders'
 
 # assets
 gem 'sass-rails', '~> 4.0.0'
