@@ -9,6 +9,11 @@ body
     text-shadow: 1px 1px white
   &.inverted
     text-shadow: 1px 1px black
+    
+  &.grid
+    .aligned
+      .image
+        display: inline
 
 h1, h2, h3, h4, h5, h6
   font-family: 'Josefin Sans', sans-serif
@@ -18,22 +23,25 @@ body
   background: #FCFCFC image-url("bright_squares.png") repeat
 
 .evry
-  .brand
-    font-size: 2.4rem
-    font-weight: lighter
+  .ui.menu
+    .brand
+      font-family: 'Josefin Sans', sans-serif
+      font-size: 2.4rem
     
     i
       opacity: 1
   
-  .hero
-    background-color: rgba(238,238,238,.7)
+  .ui.segment.hero.hero
+    background-color: rgba(238,238,238,.6)
     box-shadow: none
-    padding: 1rem 13% !important
-
+    padding: 1rem 13%
+    
     .or
       height: 2em
   
-  .feature-list
+  .ui.feature-list,
+  .ui.sign-up
+    margin-top: 3rem
 
   footer.ui.segment
     margin-top: 3rem
