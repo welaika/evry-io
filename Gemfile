@@ -27,7 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'less-rails'
-gem 'semantic-ui-rails'
+gem 'semantic-ui-rails', git: 'git@github.com:Arkham/semantic-ui-rails.git'
 gem 'detect_timezone_rails'
 gem 'jquery-cookie-rails'
 

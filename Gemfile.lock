@@ -1,4 +1,11 @@
 GIT
+  remote: git@github.com:Arkham/semantic-ui-rails.git
+  revision: 059409b39a8d9e607e5ff3c37132c0bb4cd0aa92
+  specs:
+    semantic-ui-rails (0.3.5)
+      less-rails
+
+GIT
   remote: git@github.com:matjack1/tickle.git
   revision: 8676b517e8417f9523e68b1a8b5afe28bb77a994
   specs:
@@ -262,8 +269,6 @@ GEM
       multi_json (~> 1.0)
       rubyzip (< 1.0.0)
       websocket (~> 1.0.4)
-    semantic-ui-rails (0.3.5)
-      less-rails
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
@@ -357,7 +362,7 @@ DEPENDENCIES
   rspec-rails
   rvm-capistrano
   sass-rails (~> 4.0.0)
-  semantic-ui-rails
+  semantic-ui-rails!
   shoulda-matchers
   simple_form
   simplecov
