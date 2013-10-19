@@ -2,12 +2,7 @@ require 'model_spec_helper'
 
 describe Task do
   context "using repository" do
-    let(:attributes) do
-      {
-        time_expression: "every day",
-        action: "go swimming"
-      }
-    end
+    let(:attributes) { build_attributes_for(:task) }
 
     before do
       @now = Time.local(2013, 10, 19, 0, 0, 0)

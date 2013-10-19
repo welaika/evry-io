@@ -26,10 +26,12 @@ describe HandleRecurrences do
     end
 
     context "#send_mail_notification" do
+      let(:mail) { stub }
       let(:recurrence) { stub(user: "alice", task: "cooking") }
 
       it 'sends an email to every recurrence' do
-        RecurrenceMailer.expects(:notify).with("alice", "cooking")
+        RecurrenceMailer.expects(:notify).with("alice", "cooking").returns(mail)
+        mail.expects(:deliver)
         service.send_mail_notification(recurrence)
       end
     end

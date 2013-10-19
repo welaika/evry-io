@@ -24,7 +24,7 @@ class HandleRecurrences
   end
 
   def send_mail_notification(recurrence)
-    RecurrenceMailer.notify(recurrence.user, recurrence.task)
+    RecurrenceMailer.notify(recurrence.user, recurrence.task).deliver
   end
 
   def reset_next_at(recurrence)

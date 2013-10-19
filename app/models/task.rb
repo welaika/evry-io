@@ -4,6 +4,6 @@ class Task < ActiveRecord::Base
 
   attr_accessible :time_expression, :action, :description, :user_id
 
-  validates :action, :user, presence: true
+  validates :time_expression, :action, :user_id, presence: true
 end
 
