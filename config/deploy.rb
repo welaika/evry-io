@@ -79,7 +79,7 @@ after 'deploy:update_code' do
   run "cd #{release_path}; RAILS_ENV=production bundle exec rake assets:precompile"
 
   # Fix semantic fonts
-  run "cd #{release_path}/public/assets/semantic-ui; for file in $(ls); do echo cp $file $(echo $file | sed -e 's/-.*\././'); done"
+  run "cd #{release_path}/public/assets/semantic-ui; for file in $(ls); do cp $file $(echo $file | sed -e 's/-[^.]*//'); done"
 end
 
 # Restart Passenger
