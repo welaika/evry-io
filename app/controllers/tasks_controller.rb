@@ -7,6 +7,7 @@ class TasksController < ApplicationController
   def create
     @task = CreateTask.create(params[:task])
     create!
+  end
 
   def index
     @tasks = Task.limit(10)
