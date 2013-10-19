@@ -20,11 +20,15 @@ class HandleRecurrences
   end
 
   def recurrence_hooks
-    [ :send_mail_notification, :reset_next_at ]
+    [ :send_mail_notification, :set_last_at, :reset_next_at ]
   end
 
   def send_mail_notification(recurrence)
     RecurrenceMailer.notify(recurrence.user, recurrence.task).deliver
+  end
+
+  def set_last_at(recurrence)
+    recurrence.update_attributes(last_at: recurrence.next_at)
   end
 
   def reset_next_at(recurrence)

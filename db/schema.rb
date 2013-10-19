@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131019230600) do
+ActiveRecord::Schema.define(version: 20131019232453) do
 
   create_table "delayed_jobs", force: true do |t|
     t.integer  "priority",   default: 0, null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20131019230600) do
     t.datetime "until_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "last_at"
   end
 
   add_index "recurrences", ["task_id"], name: "index_recurrences_on_task_id", using: :btree

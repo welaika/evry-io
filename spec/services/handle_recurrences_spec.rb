@@ -36,6 +36,15 @@ describe HandleRecurrences do
       end
     end
 
+    context "#set_last_at" do
+      let(:recurrence) { stub(next_at: 'paperino') }
+
+      it 'set last_at to next_at' do
+        recurrence.expects(:update_attributes).with(last_at: recurrence.next_at)
+        service.set_last_at(recurrence)
+      end
+    end
+
     context "#reset_next_at" do
       let(:recurrence) { stub }
 
