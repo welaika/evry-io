@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   def create
     @task = CreateTask.create(params[:task].merge(user_id: current_user.id))
     if @task.errors.present?
+      flash[:alert] = @task.errors.full_messages.first
       render :new
     else
       create!
