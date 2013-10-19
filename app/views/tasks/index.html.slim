@@ -19,7 +19,6 @@
                 td
                   a.set_task_state
                     i.large.empty.checkbox.icon
-
                 td.description
                   = link_to task do
                     =' task.time_expression 
@@ -34,7 +33,7 @@
                   = ui_icon_only_link 'large edit', task, class: 'edit_button'
 
       #sidebar.four.wide.column
-        = render 'sidebar', action: :index
+        = render 'sidebar'
 
 .ui.basic.modal
   .header
