@@ -8,29 +8,9 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   
-  body
-    .ui.large.inverted.menu.evry
-      .item
-        .brand
-          i.time.icon
-          | Evry
-      .right.menu
-        .item
-          a.ui.teal.button href="#" Sign In
-
-
-    .ui.inverted.menu
-      .item
-        .title Every
-      
-      .right.menu
-        .item
-          .ui.teal.button Sign up
-        a.active.item
-          i.home.icon
-          | Home
-        a.item
-          i.mail.icon
-          | Messages
+  body.evry
+    = render 'navbar'
 
     = yield
+
+    / = render 'footer'
