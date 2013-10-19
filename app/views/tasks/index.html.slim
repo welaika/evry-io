@@ -1,10 +1,34 @@
-h1 Tasks index
+.main.container.taskindex.ui.grid
+    header.row
+      .sixteen.wide.column
+        .ui.segment
+          h1.gamma Task index
+          h2= link_to 'New Task', new_task_path
 
-h2= link_to 'New Task', new_task_path
+    .row
+      .twelve.wide.column
+        .ui.segment
+          ul
+            - @tasks.each do |task|
+              li
+                = link_to task.action, task_path(task)
+                = link_to 'delete', task_path(task), method: :delete, confirm: 'Are you sure?'
 
-ul
-  - @tasks.each do |task|
-    li
-      =' link_to task.action, task_path(task)
-      = link_to 'delete', task_path(task), method: :delete, confirm: 'Are you sure?'
-
+      .four.wide.column
+        .ui.vertical.menu
+          .item
+            .ui.input.icon
+              input[type="text" placeholder="Search..."]
+              i.search.icon
+          a.item
+            i.remove.icon
+            | Delete
+          a.item
+            i.fork.code.icon
+            | Duplicate
+          a.item
+            i.hide.icon
+            | Disable task
+          a.item
+            i.unhide.icon
+            | Enable task
