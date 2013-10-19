@@ -5,42 +5,69 @@ html
   body.evry
     = render 'navbar'
 
-    .ui.two.column.middle.aligned.page.grid.segment.hero
-      .center.aligned.column
-        img.circular.ui.image src="http://placehold.it/400x400"
-      .center.aligned.column
-          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in erat eget turpis sagittis volutpat. Nullam feugiat sodales mi, ac eleifend nisi tincidunt id. Morbi consectetur aliquam mollis. Donec dapibus tristique rutrum. Nam nec mollis mauris. Proin eu commodo sapien. In eleifend et nunc sit amet lacinia. Proin elementum turpis eu libero scelerisque, at hendrerit est ornare. Proin dictum, ligula sit amet rhoncus cursus, nisl ligula volutpat tortor, et ornare magna tellus sit amet justo. Suspendisse tempus massa felis, vel auctor nisl pellentesque in. Maecenas sit amet aliquam mi. Donec vitae sapien et lorem varius interdum non id lorem.
+    .ui.middle.aligned.page.grid.segment.hero
+      .two.column.computer.only.row
+        .center.aligned.column
+          img.rounded.ui.image src="https://farm1.staticflickr.com/196/520752111_ee875c6bca_z.jpg"
+        .center.aligned.column
+            p.delta
+              strong Evry.io 
+              | has been beautifully crafted in 48 hours during the 
+              a href="" Rails Rumble 2013 
+              | competition by 
+              a href="" weLaika! 
+
+            .ui.buttons.huge
+              = ui_button "Sign Up", new_user_registration_path, "orange"
+              .or
+              = ui_button "Try It", "#", "green"
+      .column.mobile.only.row
+        .center.aligned.column
+          p.delta
+            strong Evry.io 
+            | has been beautifully crafted in 48 hours during the 
+            a href="" Rails Rumble 2013 
+            | competition by 
+            a href="" weLaika! 
 
           .ui.buttons.huge
             = ui_button "Sign Up", new_user_registration_path, "orange"
             .or
             = ui_button "Try It", "#", "green"
 
-    .ui.four.column.middle.aligned.page.grid.feature-list
+    .ui.four.column.top.aligned.page.grid.feature-list
       .center.aligned.column
         .ui.icon.header
-          i.tasks.question.icon
+          i.tasks.icon
           | Task list
-          .sub.header Have any questions? Contact Us
+          .sub.header
+            | Do you think that task list are old? 
+            strong Evry.io 
+            | will make you rethink how you use task list!
       .center.aligned.column
         .ui.icon.header
-          i.tags.question.icon
+          i.time.icon
+          | Cyclical
+          .sub.header
+            strong Every.io 
+            | makes easy to handle cyclical ToDo tasks, notifying you when you need to perform them!
+      .center.aligned.column
+        .ui.icon.header
+          i.mail.icon
+          | Mail notification
+          .sub.header
+            strong Evry.io 
+            | will send you an email remainding to perform your tasks when you need to!
+      .center.aligned.column
+        .ui.icon.header
+          i.tags.icon
           | Tag tasks
-          .sub.header Have any questions? Contact Us
-      .center.aligned.column
-        .ui.icon.header
-          i.tasks.question.icon
-          | Task list
-          .sub.header Have any questions? Contact Us
-      .center.aligned.column
-        .ui.icon.header
-          i.tags.question.icon
-          | Tag tasks
-          .sub.header Have any questions? Contact Us
+          .sub.header
+            | Order your task with tag, and find them easily!
 
     .ui.one.column.middle.aligned.page.grid.sign-up
       .center.aligned.column
-        = ui_icon_button "Sign Up", 'users', new_user_registration_path, "massive orange"
+        = ui_icon_button "Sign Up Now", 'users', new_user_registration_path, "massive orange"
 
 
     = render 'footer'
