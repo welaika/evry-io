@@ -1,8 +1,8 @@
 .ui.large.inverted.menu
   .item
     .brand
+      = link_to "Evry.i", root_url
       i.time.icon
-      = link_to "Evry.io", root_url
   - if user_signed_in?
     .item
       = link_to "Tasks", tasks_path
