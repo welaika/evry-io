@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   respond_to :js, only: [ :create, :update, :destroy ]
 
   def create
-    @task = CreateTask.create(params[:task])
+    @task = CreateTask.create(params[:task].merge(user_id: current_user.id))
     create!
   end
 
