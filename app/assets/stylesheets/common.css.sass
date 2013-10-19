@@ -1,6 +1,15 @@
 body
   font-family: 'Questrial', sans-serif
-  
+  text-shadow: 1px 1px white
+
+.ui
+  &.button
+    text-shadow: 1px 1px gray
+  &.icon.header
+    text-shadow: 1px 1px white
+  &.inverted
+    text-shadow: 1px 1px black
+
 h1, h2, h3, h4, h5, h6
   font-family: 'Josefin Sans', sans-serif
 
@@ -17,9 +26,12 @@ body
       opacity: 1
   
   .hero
-    background-color: #eee
+    background-color: rgba(238,238,238,.7)
     box-shadow: none
     padding: 1rem 13% !important
 
     .or
       height: 2em
+  
+  .feature-list
+    margin-top: 3rem
