@@ -4,7 +4,9 @@
       i.time.icon
       | Evry
   .right.menu
-    .item
-      = ui_button "Logut", destroy_user_session_path(:user), "teal", method: :delete
-    .item
-      = ui_button "Sign In", new_user_session_path, "teal"
+    - if user_signed_in?
+      .item
+        = ui_button "Logut", destroy_user_session_path(:user), "teal", method: :delete
+    -else
+      .item
+        = ui_button "Sign In", new_user_session_path, "teal"
