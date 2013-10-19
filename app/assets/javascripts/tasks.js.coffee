@@ -18,6 +18,19 @@ $(document).ready ->
     ).modal "show"
     false
 
+  $(".deleteSingleTask").click ->
+
+    task = $(this).data("task")
+    console.log task
+    $(".basic.modal").modal("setting", "onDeny", ->
+      console.log "denied"
+      alert "Denied to delete id task " + task
+    ).modal("setting", "onApprove", ->
+      console.log "approved"
+      alert "Approved to delete id task " + task
+    ).modal "show"
+    false
+
   $(".doneCheckbox").click ->
 
     task = $(this).data("task")
