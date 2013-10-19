@@ -1,23 +1,27 @@
 - autofocus ||= false
 
-.ui.form.segment= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  .ui.error.message
-    .header= f.error_notification
+.ui.segment
+  .ui.form= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    .ui.error.message
+      .header= f.error_notification
 
-  .field
-    = f.label :email
-    .ui.left.labeled.icon.input
-      = f.input_field :email, placeholder: "Your email", autofocus: autofocus
-      i.mail.icon
-      .ui.corner.label
-        i.icon.asterisk
-  .field
-    = f.label :password
-    .ui.left.labeled.icon.input
-      = f.input_field :password
-      i.lock.icon
-      .ui.corner.label
-        i.icon.asterisk
-  .ui.error.message
-    .header We noticed some issues
-  = f.button :submit, "Sign In", class: 'ui teal submit large button right floated'
+    .field
+      = f.label :email
+      .ui.left.labeled.icon.input
+        = f.input_field :email, placeholder: "Your email", autofocus: autofocus
+        i.mail.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .field
+      = f.label :password
+      .ui.left.labeled.icon.input
+        = f.input_field :password
+        i.lock.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .ui.error.message
+      .header We noticed some issues
+    = f.button :submit, "Sign In", class: 'ui teal submit large button right floated'
+
+  .ui.horizontal.clearing.divider Or
+  = ui_icon_button "Sign In with GitHub", 'github alternate', user_omniauth_authorize_path(:github), "fluid black large"
