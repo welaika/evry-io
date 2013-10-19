@@ -14,6 +14,7 @@ gem 'cancan'
 gem 'inherited_resources'
 gem 'has_scope'
 gem 'responders'
+gem 'therubyracer'
 gem 'tickle', git: 'git@github.com:matjack1/tickle.git'
 
 # assets
