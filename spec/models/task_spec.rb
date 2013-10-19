@@ -1,6 +1,10 @@
 require 'model_spec_helper'
 
 describe Task do
+  it { should validate_presence_of(:action) }
+  it { should validate_presence_of(:time_expression) }
+  it { should validate_presence_of(:user_id) }
+
   context "using repository" do
     let(:attributes) { build_attributes_for(:task) }
 
@@ -22,3 +26,4 @@ describe Task do
 
   end
 end
+
