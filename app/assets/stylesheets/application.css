@@ -11,6 +11,7 @@
  *= require_self
  *= require semantic-ui
  *= require semantic-ui-fixes
+ *= require typeplate
  *= require common
  *= require tasks
  */
