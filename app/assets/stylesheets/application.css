@@ -12,6 +12,7 @@
  *= require semantic-ui
  *= require semantic-ui-fixes
  *= require typeplate
+ *= require tipr
  *= require common
  *= require tasks
  */
