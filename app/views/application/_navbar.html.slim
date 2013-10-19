@@ -2,7 +2,7 @@
   .item
     .brand
       i.time.icon
-      | Evry.io
+      = link_to "Evry.io", root_url
   - if user_signed_in?
     .item
       = link_to "Tasks", tasks_path
