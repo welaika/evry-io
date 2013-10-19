@@ -1,0 +1,13 @@
+section#flash.ui.one.column.page.grid
+  .ui.column
+    - [:notice, :alert].each do |m|
+      - if flash[m].present?
+        .ui.large.floating.icon.message(class=flash_floating_class[m])
+          i.icon(class=flash_icon_class[m])
+          .content
+            .header= flash_header_message[m]
+            - if flash[m].is_a? String
+              p= flash[m]
+            - elsif flash[m].is_a? Array
+              - flash[m].each do |message|
+                p= message

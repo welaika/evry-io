@@ -10,4 +10,25 @@ module ApplicationHelper
     end
   end
 
+  def flash_floating_class
+    {
+      notice: "info",
+      alert: "error"
+    }
+  end
+
+  def flash_icon_class
+    {
+      notice: "ok sign",
+      alert: "warning"
+    }
+  end
+
+  def flash_header_message
+    {
+      notice: "Success",
+      alert: "Whoops! Something went wrong!"
+    }
+  end
+
 end

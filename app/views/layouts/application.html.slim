@@ -5,8 +5,9 @@ html
   body.evry
     = render 'navbar'
 
+    = render 'flash_messages'
+
     .ui.one.column.page.grid
       = yield
 
     = render 'footer'
-    
