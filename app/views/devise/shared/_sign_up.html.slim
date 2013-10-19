@@ -29,4 +29,4 @@
     = f.button :submit, "Sign Up", class: 'ui orange submit large button right floated'
 
   .ui.horizontal.clearing.divider Or
-  = ui_icon_button "Sign Up with GitHub", 'github alternate', new_user_session_path, "fluid black large"
+  = ui_icon_button "Sign Up with GitHub", 'github alternate', user_omniauth_authorize_path(:github), "fluid black large"
