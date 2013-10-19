@@ -14,6 +14,7 @@ gem 'cancan'
 gem 'inherited_resources'
 gem 'has_scope'
 gem 'responders'
+gem 'tickle', git: 'git@github.com:matjack1/tickle.git'
 
 # assets
 gem 'sass-rails', '~> 4.0.0'

@@ -17,3 +17,7 @@
 
 # Ignore database yaml
 /config/database.yml
+
+# Ignore bin stubs
+/bin/stubs/
+
