@@ -7,9 +7,9 @@
     .row
       .twelve.wide.column
         .ui.segment
-          p= @task.description
           p= @task.recurrence.expression
           p= @task.recurrence.next_at
 
       .four.wide.column
         = render 'sidebar'
+

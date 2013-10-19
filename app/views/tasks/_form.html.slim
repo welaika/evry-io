@@ -9,12 +9,6 @@
       .ui.corner.label
         i.icon.asterisk
   .field
-    = task.label :description
-    .ui.input
-      = task.input_field :description
-      .ui.corner.label
-        i.icon.asterisk
-  .field
     = task.label :time_expression
     .ui.input
       = task.input_field :time_expression
@@ -22,3 +16,4 @@
         i.icon.asterisk
 
   = task.button :submit, "Create Task", class: 'ui teal submit button'
+
