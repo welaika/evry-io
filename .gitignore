@@ -21,3 +21,5 @@
 # Ignore bin stubs
 /bin/stubs/
 
+.plumber*
+

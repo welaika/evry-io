@@ -1,5 +1,12 @@
 Evry::Application.routes.draw do
-  root 'static#welcome'
+  authenticated :user do
+    root :to => "tasks#index"
+  end
+  unauthenticated :user do
+    devise_scope :user do
+      get "/" => "static#welcome"
+    end
+  end
 
   get '/static/welcome' => 'static#welcome'
   get '/static/logged' => 'static#logged'
@@ -12,3 +19,4 @@ Evry::Application.routes.draw do
 
   resources :tasks
 end
+

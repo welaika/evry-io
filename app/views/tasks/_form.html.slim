@@ -1,1 +1,5 @@
-h2 Task form
+= simple_form_for @task do |task|
+  = task.input :action
+  = task.input :description
+  = task.button :submit
+
