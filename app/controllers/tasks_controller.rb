@@ -7,6 +7,10 @@ class TasksController < ApplicationController
   respond_to :html
   respond_to :js, only: [ :create, :update, :destroy ]
 
+  def index
+    @tasks = @tasks.limit(10)
+  end
+
   def create
     @task = CreateTask.create(params[:task].merge(user_id: current_user.id))
     if @task.errors.present?
@@ -21,10 +25,6 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     UpdateTask.new(@task).perform(params[:task])
     update!
-  end
-
-  def index
-    @tasks = @tasks.limit(10)
   end
 
   def duplicate

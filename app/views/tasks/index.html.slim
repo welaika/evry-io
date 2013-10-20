@@ -25,8 +25,7 @@
                 td= recurrence_human_next_at(task.recurrence)
 
                 td
-                  a.delete_button href="#{task_path(task.id)}"
-                    i.large.remove.icon
+                  = ui_icon_only_link "large remove", task, method: :delete, remote: true, class: "delete_button"
                   = ui_icon_only_link 'large edit', task, class: 'edit_button'
 
       #sidebar.four.wide.column

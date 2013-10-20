@@ -10,7 +10,6 @@
     = vertical_menu_icon_link 'New task', 'add', new_task_path
 -elsif action == :show
   .ui.vertical.menu data-task-id="#{task.id}"
-    = vertical_menu_delete_icon_link task_path(task)
     a.item.fork_button href="#{duplicate_task_path}"
       i.fork.code.icon
       | Duplicate

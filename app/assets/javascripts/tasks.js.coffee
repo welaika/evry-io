@@ -17,14 +17,14 @@ ready = ->
   $('.popup').tipr()
 
   $(".delete_button").click (event) ->
-    $(".basic.modal").modal("setting", "onDeny", ->
+    $(".basic.modal").modal("setting", "onDeny", =>
       console.log "denied deletion"
-      false
-    ).modal("setting", "onApprove", ->
+    ).modal("setting", "onApprove", =>
       console.log "delete task" 
-      true
+      $.post(@href, { _method: 'delete' }, null, "script")
     ).modal "show"
+
+    false
 
 $(ready)
 $(document).on('page:load', ready)
-  

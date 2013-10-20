@@ -35,7 +35,7 @@ module ApplicationHelper
   end
 
   def vertical_menu_delete_icon_link(url, options = {})
-    link_to url, options.merge(method: :delete, remote: true, class: 'item delete_button') do
+    link_to url, options.merge(method: :delete, class: 'item delete_button') do
       content_tag(:i, "", class: "icon remove") + "Delete"
     end
   end

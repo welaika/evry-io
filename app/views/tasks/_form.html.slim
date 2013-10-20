@@ -1,9 +1,6 @@
 - action = controller.action_name.to_sym
-
-- if action == :new
-  - options = {}
-- elsif action == :show
-  - options = { remote: true }
+- options = {}
+- options = { remote: true } if action == :show
 
 .ui.form = simple_form_for task, options do |t|
   = 
@@ -17,7 +14,4 @@
       = t.input_field :action, placeholder: "Cleaning the Room", value: task.action
 
   button type="submit" class="ui teal submit right floated button" data-buttonspinner='' id="submit-form-button"
-    - if action == :new
-      | Create Task
-    - elsif action == :show
-      | Update Task
+    | Save Task
