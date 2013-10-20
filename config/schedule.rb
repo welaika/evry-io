@@ -26,3 +26,7 @@ every 1.minute do
   rake "handle_recurrences:perform"
 end
 
+every '*/10 * * * *' do
+  rake "guest:reset"
+end
+
