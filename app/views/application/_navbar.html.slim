@@ -5,15 +5,13 @@
         | Evry.i
         i.time.icon
   - if user_signed_in?
-    .item
-      = link_to "Tasks", tasks_path, id: "task-list-menu"
-  .right.menu
+    .item= link_to "Tasks", tasks_path, id: "task-list-menu"
+
     - if user_signed_in?
-      .item
-        = link_to "My Account", edit_user_registration_path
-      .item
-        = ui_button "Logout", destroy_user_session_path, "red logout", method: :delete
-    - else
-      .item
-        = ui_button "Sign In", new_user_session_path, "teal"
+      .right.menu
+        .item= link_to "My Account", edit_user_registration_path
+        .item= ui_button "Logout", destroy_user_session_path, "red logout", method: :delete
+
+  - else
+    .right.item= ui_button "Sign In", new_user_session_path, "teal"
 
