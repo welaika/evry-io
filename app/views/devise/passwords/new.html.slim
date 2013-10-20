@@ -1,0 +1,23 @@
+.ui.grid
+  header.row
+    .sixteen.wide.column
+      .ui.segment
+        h1.gamma Forgot your password?
+  .row
+    .sixteen.wide.column
+    .eight.wide.column
+      = render 'devise/shared/forgot_pw', autofocus: true
+
+    .eight.wide.column
+      .ui.segment
+        .row
+          .sixteen.wide.column
+            h1.delta Do you know the password?
+            p
+              | You can login normally without changing the password, of course!
+        .row
+          .sixteen.wide.center.aligned.column
+            .ui.buttons.medium
+              = ui_button "Sign In", new_user_session_path, "teal"
+
+= render "devise/shared/links"

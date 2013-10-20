@@ -1,0 +1,17 @@
+- autofocus ||= false
+
+.ui.segment
+  .ui.form= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+    .ui.error.message
+      .header= f.error_notification
+
+    .field
+      = f.label :email
+      .ui.left.labeled.icon.input
+        = f.input_field :email, placeholder: "Your email", autofocus: autofocus
+        i.mail.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .ui.error.message
+      .header We noticed some issues
+    = f.button :submit, "Send me instructions", class: 'ui purple submit medium button right floated'

@@ -1,0 +1,11 @@
+.ui.grid
+  header.row
+    .sixteen.wide.column
+      .ui.segment
+        h1.gamma Change your password
+  .row
+    .sixteen.wide.column
+    .eight.wide.column
+      = render 'devise/shared/edit_pw', autofocus: true
+
+= render "devise/shared/links"

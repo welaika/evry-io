@@ -1,0 +1,24 @@
+- autofocus ||= false
+
+.ui.segment
+  .ui.form= simple_form_for(resource, :as => resource_name, :url => password_path(resource_name)) do |f|
+    .ui.error.message
+      .header= f.error_notification
+
+    .field
+      = f.label :password
+      .ui.left.labeled.icon.input
+        = f.input_field :password, required: true, placeholder: "Choose a new password"
+        i.lock.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .field
+      = f.label :password_confirmation
+      .ui.left.labeled.icon.input
+        = f.input_field :password_confirmation, required: true, placeholder: "Confirm your new password"
+        i.lock.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .ui.error.message
+      .header We noticed some issues
+    = f.button :submit, "Change password", class: 'ui purple submit medium button right floated'
