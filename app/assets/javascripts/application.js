@@ -19,7 +19,6 @@
 //= require jquery.simple-text-rotator
 //= require tipr.min
 //= require hopscotch
-//= require jquery.simple-text-rotator
 //= require spin.min
 //= require jquery.spin
 //= require jquery.buttonspinner-1.0.3.min
