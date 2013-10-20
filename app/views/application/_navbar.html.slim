@@ -14,7 +14,7 @@
       .item
         = link_to "My Account", edit_user_registration_path
       .item
-        = ui_button "Logout", destroy_user_session_path, "basic logout", method: :delete
+        = ui_button "Logout", destroy_user_session_path, "red logout", method: :delete
     - else
       .item
         = ui_button "Sign In", new_user_session_path, "teal"
