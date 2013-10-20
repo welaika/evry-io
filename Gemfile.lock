@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git@github.com:matjack1/tickle.git
-  revision: 8676b517e8417f9523e68b1a8b5afe28bb77a994
+  revision: 7f00d93c5c571dcd98c173ad65bffa502f7f556e
   specs:
     tickle (0.1.7)
       activesupport
