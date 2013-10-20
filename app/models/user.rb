@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessible :email, :password, :password_confirmation,
-      :remember_me, :provider, :uid, :time_zone
+      :remember_me, :provider, :uid, :time_zone, :is_guest
 
   has_many :tasks, dependent: :destroy
 
