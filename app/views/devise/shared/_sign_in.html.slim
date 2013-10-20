@@ -22,6 +22,8 @@
     .ui.error.message
       .header We noticed some issues
     = f.button :submit, "Sign In", class: 'ui teal submit large button right floated'
+  - if devise_mapping.recoverable? && controller_name != "passwords"
+    = link_to "Forgot your password?", new_password_path(resource_name)
 
   .ui.horizontal.clearing.divider Or
   = ui_icon_button "Sign In with GitHub", 'github alternate', user_omniauth_authorize_path(:github), "fluid black large"
