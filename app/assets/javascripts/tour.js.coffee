@@ -45,9 +45,11 @@ tour =
 
 ready = ->
   if $(".taskindex").length > 0
-    if (window.user_sign_count < 2) and ($.cookie('tour') is null)
-      console.log "Start the tour!"
+    if (window.user_sign_count < 2) and ($.cookie('tour') is null) and !window.user_guest
       hopscotch.startTour tour
+    else if window.user_guest and ($.cookie('tour') is null)
+      hopscotch.startTour tour
+    
     #hopscotch.startTour tour
 
 $(ready)
