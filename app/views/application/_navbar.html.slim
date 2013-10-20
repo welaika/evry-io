@@ -7,8 +7,6 @@
   - if user_signed_in?
     .item
       = link_to "Tasks", tasks_path, id: "task-list-menu"
-    .item
-      = link_to "Create Task", new_task_path
   .right.menu
     - if user_signed_in?
       .item

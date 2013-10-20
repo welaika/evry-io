@@ -3,7 +3,6 @@
 
 - if action == :index
   .ui.vertical.menu
-    = vertical_menu_icon_link 'New task', 'add', new_task_path
     .item.examples
       p.title
         | Do you need a task?
@@ -31,7 +30,7 @@
           i 
             |  I want to 
           |  read a new book
--elsif action == :show
+- elsif action == :show
   .ui.vertical.menu data-task-id="#{task.id}"
     a.item.fork_button href="#{duplicate_task_path}"
       i.fork.code.icon
