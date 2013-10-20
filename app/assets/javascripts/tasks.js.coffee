@@ -7,7 +7,7 @@ ready = ->
   $(".rotate_words").textrotator
     animation: "fade"
     separator: ","
-    speed: 2000
+    speed: 2500
 
   $(".rotate_words2").textrotator
     animation: "fade"

@@ -8,14 +8,17 @@ html
     .ui.middle.aligned.page.grid.segment.hero
       .two.column.computer.only.row
         .center.aligned.column
-          p.slogan
-            | Every 
-            span.rotate_words
-              | day, week, month, year, 2 days, 3 weeks, 2 months, 3 days, 2 weeks, 4 months
-            |  you have to 
-            span.rotate_words2
-              | clear the room, go to the gym, buy stuff
-          img.rounded.ui.image src="https://farm1.staticflickr.com/196/520752111_ee875c6bca_z.jpg"
+          .slogan
+            p
+              | Every 
+            p
+              span.rotate_words
+                | day, week, month, year, 2 days, 3 weeks, 2 months, 3 days, 2 weeks, 4 months
+            p
+              | I should remember to  
+            p
+              span.rotate_words2
+                  | clear the room, go to the gym, buy stuff
         .center.aligned.column
           = render "homepage_side"
       .column.mobile.tablet.only.row
