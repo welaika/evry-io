@@ -19,6 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
+env :PATH, '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
 set :output, '/var/www/apps/railsrumble/shared/log/cron.log'
 
 every 1.minute do
