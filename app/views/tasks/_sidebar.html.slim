@@ -40,6 +40,6 @@
     .item.guest-mail
       h5.title Hello guest user!
       p
-        | View 
-        = link_to "my emails", "http://mailinator.com/inbox.jsp?to=evry.guest", target: "_blank"
+        = "Your timezone has been set to #{current_user.time_zone}. View all your emails "
+        = link_to "here", "http://mailinator.com/inbox.jsp?to=evry.guest", target: "_blank"
         | .
