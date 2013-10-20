@@ -4,7 +4,7 @@
 
   .field
     .ui.massive.input
-      = task.input_field :time_expression, placeholder: "When"
+      = task.input_field :time_expression, placeholder: "Every"
       .ui.corner.label
         i.icon.asterisk
   .field
@@ -16,5 +16,5 @@
       .ui.corner.label
         i.icon.asterisk
 
-  = task.button :submit, "Remind me!", class: 'ui teal submit button'
+  = task.button :submit, "Remind me!", class: 'ui teal submit button', id:'submit-form-button'
 

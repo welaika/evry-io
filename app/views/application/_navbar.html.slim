@@ -6,7 +6,7 @@
         i.time.icon
   - if user_signed_in?
     .item
-      = link_to "Tasks", tasks_path
+      = link_to "Tasks", tasks_path, :id => 'task-list-menu'
   .right.menu
     - if user_signed_in?
       .item

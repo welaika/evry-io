@@ -17,4 +17,5 @@
 //= require jquery.detect_timezone
 //= require jquery.cookie
 //= require tipr.min
+//= require hopscotch
 //= require_tree .
