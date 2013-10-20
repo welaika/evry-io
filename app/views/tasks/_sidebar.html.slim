@@ -4,7 +4,7 @@
 - if action == :index
   .ui.vertical.menu
     .item.examples
-      h5.title Need for a task? Try with
+      h5.title Need ideas for a task?
       blockquote
         p
           | Every day 
@@ -34,3 +34,12 @@
     a.item.fork_button href="#{duplicate_task_path}"
       i.fork.code.icon
       | Duplicate
+
+- if current_user.is_guest?
+  .ui.vertical.menu
+    .item.guest-mail
+      h5.title Hello guest user!
+      p
+        | View 
+        = link_to "my emails", "http://mailinator.com/inbox.jsp?to=evry.guest", target: "_blank"
+        | .

@@ -9,7 +9,8 @@
 
     - if user_signed_in?
       .right.menu
-        .item= link_to "My Account", edit_user_registration_path
+        - unless current_user.is_guest?
+          .item= link_to "My Account", edit_user_registration_path
         .item= ui_button "Logout", destroy_user_session_path, "red logout", method: :delete
 
   - else
