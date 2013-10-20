@@ -2,21 +2,16 @@
     header.row
       .sixteen.wide.column
         .ui.segment
-          h1.gamma Task index
-
-    .row
-      .sixteen.wide.column
-        .ui.segment
           = simple_form_for @task, html: { class: "natural-language", remote: true, novalidate: '' } do |t|
             .ui.grid
               .six.wide.column
                 .ui.field.input
-                  = t.input_field :time_expression, placeholder: "Every monday"
+                  = t.input_field :time_expression, placeholder: "Every month"
               .two.wide.column
                 span.want-to I want to
               .six.wide.column
                 .ui.field.input
-                  = t.input_field :action, placeholder: "clean the room"
+                  = t.input_field :action, placeholder: "clean my room"
               .two.wide.right.aligned.column
                 button class="ui small teal button" data-buttonspinner="" id="submit-form-button"
                   | Create

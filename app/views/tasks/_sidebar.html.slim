@@ -4,32 +4,31 @@
 - if action == :index
   .ui.vertical.menu
     .item.examples
-      p.title
-        | Do you need a task?
+      h5.title Need for a task? Try with
       blockquote
         p
           | Every day 
           i 
             |  I want to 
-          |  clean my room perfectly
+          |  clean my room perfectly.
       blockquote
         p
-          | Every week 
+          | Every wednesday 
           i 
             |  I want to 
-          |  go to the gym
+          |  go to the gym near my office.
       blockquote
         p
           | Every 3 months 
           i 
             |  I want to 
-          |  donate my blood
+          |  donate my blood.
       blockquote
         p
-          | Every 3 weeks 
+          | Every 2 weeks
           i 
             |  I want to 
-          |  read a new book
+          |  read a new Douglas Adams book.
 - elsif action == :show
   .ui.vertical.menu data-task-id="#{task.id}"
     a.item.fork_button href="#{duplicate_task_path}"
