@@ -28,7 +28,10 @@
                 td= recurrence_human_next_at(task.recurrence)
 
                 td
-                  a.delete_button[data-task-id="#{task.id}"]
+                  span.popup[data-tip="#{task.recurrence.next_at.strftime('%d %B %Y')}"]
+                    = distance_of_time_in_words(Time.now, task.recurrence.next_at)
+                td
+                  a.delete_button href="#{task_path(task.id)}"
                     i.large.remove.icon
                   = ui_icon_only_link 'large edit', task, class: 'edit_button'
 

@@ -1,22 +1,18 @@
 - action ||= :index
+- task ||= { id: nil }
 
-.ui.vertical.menu
-  - if action == :index
+- if action == :index
+  .ui.vertical.menu
     .item
       .ui.input.icon
-        input[type="text" placeholder="Search..."]
+        input type="text" placeholder="Search..."
         i.search.icon
     = vertical_menu_icon_link 'New task', 'add', new_task_path
-  - elsif action == :show
-    a.item
+-elsif action == :show
+  .ui.vertical.menu data-task-id="#{task.id}"
+    a.item.delete_button href="#{task_path}"
       i.remove.icon
       | Delete
-    a.item
+    a.item.fork_button href="#{duplicate_task_path}"
       i.fork.code.icon
       | Duplicate
-    a.item
-      i.hide.icon
-      | Disable task
-    a.item
-      i.unhide.icon
-      | Enable task
