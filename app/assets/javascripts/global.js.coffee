@@ -11,6 +11,15 @@ ready = ->
   $('form').on 'click', '[data-buttonspinner]', ->
     $(@).buttonspinner('start')
 
+  $(".rotate_words").textrotator
+    animation: "fade"
+    separator: ","
+    speed: 2000
+
+  $(".rotate_words2").textrotator
+    animation: "fade"
+    separator: ","
+    speed: 2500
 
 $(ready)
 $(document).on('page:load', ready)

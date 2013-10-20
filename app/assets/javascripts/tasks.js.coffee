@@ -36,16 +36,6 @@ tasksReady = ->
 $ ->
   tasksReady()
 
-  $(".rotate_words").textrotator
-    animation: "fade"
-    separator: ","
-    speed: 2000
-
-  $(".rotate_words2").textrotator
-    animation: "fade"
-    separator: ","
-    speed: 2500
-
   $('blockquote').quovolver()
 
 $(document).on('page:load', tasksReady)
