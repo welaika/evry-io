@@ -21,5 +21,7 @@ ready = ->
     separator: ","
     speed: 2500
 
+  $('blockquote').quovolver()
+
 $(ready)
 $(document).on('page:load', ready)

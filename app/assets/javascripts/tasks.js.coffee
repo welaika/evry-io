@@ -33,12 +33,7 @@ tasksReady = ->
   $(".delete_button").unbind('click', deleteButtonHandler).click(deleteButtonHandler)
   $('.set_task_state').unbind('click', setTaskStateHandler).click(setTaskStateHandler)
 
-$ ->
-  tasksReady()
-
-  $('blockquote').quovolver()
-
+$(tasksReady)
 $(document).on('page:load', tasksReady)
-
 window.tasksReady = tasksReady
 
