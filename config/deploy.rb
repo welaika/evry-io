@@ -1,6 +1,4 @@
 require 'bundler/capistrano'
-
-set :whenever_command, 'bundle exec whenever'
 require 'whenever/capistrano'
 
 # This capistrano deployment recipe is made to work with the optional
