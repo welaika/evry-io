@@ -20,6 +20,7 @@ gem 'delayed_job_active_record'
 gem 'simple_form'
 gem 'omniauth-github'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+gem 'whenever', :require => false
 
 # assets
 gem 'sass-rails', '~> 4.0.0'
