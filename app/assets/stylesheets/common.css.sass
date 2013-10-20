@@ -124,14 +124,22 @@ blockquote
 
       .description a
         color: rgba(0, 0, 0, 0.8)
-        
+
+    .want-to
+      font-weight: lighter
+      font-size: 1.5rem
+      position: relative
+      top: -4px
+      left: 10px
+
+      &.padded
+        padding-left: 20px
+
+    input
+      font-weight: lighter
+      font-family: "Source Sans Pro"
+      
     form.natural-language
-      .want-to
-        font-weight: lighter
-        font-size: 1.5rem
-        position: relative
-        top: -4px
-        left: 10px
       input
         border: none
         border-bottom: 1px dashed #444
@@ -142,8 +150,6 @@ blockquote
         outline: 0
         padding: 0
         width: 100%
-        font-weight: lighter
-        font-family: "Source Sans Pro"
         &:first-letter
           text-transform: capitalize
           

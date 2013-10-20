@@ -3,12 +3,11 @@
 - options = { remote: true } if action == :show
 
 .ui.form = simple_form_for task, options do |t|
-  = 
   .field
     .ui.massive.input
       = t.input_field :time_expression, placeholder: "Every monday of the month", value: task.time_expression
   .field
-    p I want to
+    p.want-to.padded I want to
   .field
     .ui.massive.input
       = t.input_field :action, placeholder: "Cleaning the Room", value: task.action
