@@ -28,7 +28,7 @@ class TasksController < ApplicationController
   end
 
   def index
-    @tasks = @tasks.limit(10)
+    @tasks = @tasks.page(params[:page])
     @task = Task.new
   end
 

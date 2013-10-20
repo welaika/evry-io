@@ -34,7 +34,10 @@
             - @tasks.each do |task|
               = render 'single_task', task: task
 
+        = paginate @tasks
+
       #sidebar.four.wide.column
         = render 'sidebar', action: :index
 
 = render 'delete_modal'
+
