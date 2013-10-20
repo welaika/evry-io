@@ -7,16 +7,18 @@
     .row
       .twelve.wide.column
         .ui.segment
-          .ui.form
+          .ui.form= simple_form_for @task, remote: true do |task|
             .field
               .ui.massive.input
-                input type="text" placeholder="Every monday of the month" value="#{@task.time_expression}"
+                = task.input_field :time_expression, placeholder: "Every monday of the month", value: @task.time_expression
             .field
               p I want to
             .field
               .ui.massive.input
-                input type="text" placeholder="Cleaning the Room" value="#{@task.action}"
-          .ui.horizontal.icon.divider
+                = task.input_field :action, placeholder: "Cleaning the Room", value: @task.action
+            button type="submit" class="ui teal submit right floated button" data-buttonspinner=''
+              | Update Task
+          .ui.horizontal.clearing.icon.divider
             i.circular.calendar.icon
           table.ui.basic.table.notifications
             tbody

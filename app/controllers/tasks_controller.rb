@@ -17,6 +17,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def update
+    @task = Task.find(params[:id])
+    UpdateTask.new(@task).perform(params[:task])
+    update!
+  end
+
   def index
     @tasks = @tasks.limit(10)
   end
