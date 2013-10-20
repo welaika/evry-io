@@ -35,20 +35,4 @@
       #sidebar.four.wide.column
         = render 'sidebar', action: :index
 
-.ui.basic.modal
-  .header
-    | Delete your task
-  .content
-    .left
-      i.remove.sign.icon
-    .right
-      p
-        | Are you sure you want to delete this task?
-  .actions
-    .two.fluid.ui.buttons
-      .ui.negative.labeled.icon.button
-        i.remove.icon
-        | No
-      .ui.positive.right.labeled.icon.button
-        | Yes
-        i.checkmark.icon
+= render 'delete_modal'
