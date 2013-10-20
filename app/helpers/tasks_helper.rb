@@ -1,9 +1,11 @@
 module TasksHelper
   def task_summary(task)
-    result = []
-    result << task.time_expression
-    result << content_tag(:em) { "I want to" }
-    result << task.action
-    result.join(" ").capitalize.html_safe
+    result = [
+      task.time_expression,
+      "I want to",
+      task.action
+    ].join(" ").capitalize
+    truncate(result, length: 50)
   end
+
 end
