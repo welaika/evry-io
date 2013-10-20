@@ -27,6 +27,11 @@ class TasksController < ApplicationController
     update!
   end
 
+  def index
+    @tasks = @tasks.limit(10)
+    @task = Task.new
+  end
+
   def duplicate
     task = Task.find(params[:id])
 

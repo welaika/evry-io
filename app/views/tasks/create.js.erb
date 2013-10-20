@@ -2,3 +2,5 @@ $('form[name="taskedit"] [data-buttonspinner]').buttonspinner('stop')
 
 $('#flash').replaceWith("<%= escape_javascript render 'flash_messages' %>")
 hide_flashes()
+
+$('.taskindex table tbody').append("<%= escape_javascript render 'single_task', task: @task %>")

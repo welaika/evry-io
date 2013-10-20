@@ -118,6 +118,36 @@ blockquote
 
       .description a
         color: rgba(0, 0, 0, 0.8)
+        
+    form.natural-language
+      input
+        border: none
+        border-bottom: 1px dashed #444
+        border-radius: 0
+        color: #444
+        font-size: 1.5em
+        height: 2rem
+        outline: 0
+        padding: 0
+        width: 100%
+        &:first-letter
+          text-transform: capitalize
+          
+      .field.input.error > input
+        border-radius: 0
+        border-bottom-color: #D95C5C
+      .ui.red.pointing.prompt.label
+        margin-top: 0.3em
+        font-size: 0.85rem
+        text-transform: lowercase
+        &:first-letter
+          text-transform: capitalize
+          
+      button:focus
+        outline: 1px solid #444
+          
+      em
+        font-size: 1.6em
 
     #sidebar
       padding-left: 0
