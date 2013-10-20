@@ -7,12 +7,12 @@ ready = ->
   $(".rotate_words").textrotator
     animation: "fade"
     separator: ","
-    speed: 2500
+    speed: 2000
 
   $(".rotate_words2").textrotator
     animation: "fade"
     separator: ","
-    speed: 3000
+    speed: 2500
 
   $('.popup').tipr()
 
