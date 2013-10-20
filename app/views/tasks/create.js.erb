@@ -4,5 +4,6 @@ $('#flash').replaceWith("<%= escape_javascript render 'flash_messages' %>")
 hide_flashes()
 <% flash.discard %>
 
-$('.taskindex table tbody').append("<%= escape_javascript render 'single_task', task: @task %>")
-tasksReady()
+var single_task = "<%= escape_javascript render 'single_task', task: @task %>";
+$('.taskindex table tbody').append(single_task);
+tasksReady();
