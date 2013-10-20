@@ -25,10 +25,12 @@ tour =
     target: "task-list-menu"
     placement: "bottom"
   ]
+  onEnd: ->
+    $.cookie('tour','1')
 
 $(document).ready ->
   if $(".newtask").length > 0
-    if window.user_sign_count <= 1
+    if (window.user_sign_count < 1) and (typeof $.cookie('tour') is 'undefined')
       # Start the tour!
       hopscotch.startTour tour
 
