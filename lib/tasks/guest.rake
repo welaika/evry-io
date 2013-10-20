@@ -28,14 +28,26 @@ namespace :guest do
 
     CreateTask.create({
       user_id: guest.id,
+      time_expression: "Every Christmas",
+      action: "make a cheesecake."
+    })
+
+    CreateTask.create({
+      user_id: guest.id,
       time_expression: "Every 6 months",
       action: "update my resume."
+    })
+
+    CreateTask.create({
+      user_id: guest.id,
+      time_expression: "Every 5th May",
+      action: "buy flowers for my girl."
     })
 
     unscheduled = CreateTask.create({
       user_id: guest.id,
       time_expression: "Every day",
-      action: "buy milk"
+      action: "buy milk."
     })
 
     unscheduled.recurrence.update_attribute(:next_at, nil)

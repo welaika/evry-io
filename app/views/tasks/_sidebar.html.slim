@@ -10,10 +10,10 @@
           | Every day 
           i 
             |  I want to 
-          |  clean my room perfectly.
+          |  buy milk and groceries.
       blockquote
         p
-          | Every wednesday 
+          | Every Wednesday 
           i 
             |  I want to 
           |  go to the gym near my office.
@@ -22,13 +22,25 @@
           | Every 3 months 
           i 
             |  I want to 
-          |  donate my blood.
+          |  donate to charity.
       blockquote
         p
           | Every 2 weeks
           i 
             |  I want to 
-          |  read a new Douglas Adams book.
+          |  read a Douglas Adams book.
+      blockquote
+        p
+          | Every Christmas
+          i 
+            |  I want to 
+          |  make a delicious cheesecake.
+      blockquote
+        p
+          | Every 7th July
+          i 
+            |  I want to 
+          |  send flowers to my sister-in-law.
 - elsif action == :show
   .ui.vertical.menu data-task-id="#{task.id}"
     a.item.fork_button href="#{duplicate_task_path}"
@@ -40,7 +52,7 @@
     .item.guest-mail
       h5.title Hello guest user!
       p
-        = "Your timezone has been set to #{current_user.time_zone}. View all your emails "
-        = link_to "here", "http://mailinator.com/inbox.jsp?to=evry.guest", target: "_blank"
+        = "Your timezone has been set to #{current_user.time_zone}. View all "
+        = link_to "your emails here", "http://mailinator.com/inbox.jsp?to=evry.guest", target: "_blank"
         | .
     .item.ui.red.message Your data will be resetted every 10 minutes.

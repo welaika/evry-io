@@ -4,7 +4,7 @@ module TasksHelper
       task.time_expression,
       "I want to",
       task.action
-    ].join(" ").capitalize
+    ].join(" ")
     truncate(result, length: 50)
   end
 
