@@ -1,4 +1,4 @@
-.main.container.edittask.ui.grid
+.main.container.taskshow.ui.grid
     header.row
       .sixteen.wide.column
         .ui.segment
@@ -10,12 +10,12 @@
           .ui.form
             .field
               .ui.massive.input
-                input type="text" placeholder="Insert your moment" value="#{@task.time_expression}"
+                input type="text" placeholder="Every monday of the month" value="#{@task.time_expression}"
             .field
               p I want to
             .field
               .ui.massive.input
-                input type="text" placeholder="Insert your action" value="#{@task.action}"
+                input type="text" placeholder="Cleaning the Room" value="#{@task.action}"
           .ui.horizontal.icon.divider
             i.circular.calendar.icon
           table.ui.basic.table.notifications
