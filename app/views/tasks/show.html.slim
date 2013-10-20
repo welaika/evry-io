@@ -7,17 +7,7 @@
     .row
       .twelve.wide.column
         .ui.segment
-          .ui.form= simple_form_for @task, remote: true do |task|
-            .field
-              .ui.massive.input
-                = task.input_field :time_expression, placeholder: "Every monday of the month", value: @task.time_expression
-            .field
-              p I want to
-            .field
-              .ui.massive.input
-                = task.input_field :action, placeholder: "Cleaning the Room", value: @task.action
-            button type="submit" class="ui teal submit right floated button" data-buttonspinner=''
-              | Update Task
+          = render 'form', task: @task
           .ui.horizontal.clearing.icon.divider
             i.circular.calendar.icon
           table.ui.basic.table.notifications
@@ -30,6 +20,6 @@
                 td.value= recurrence_human_next_at(@task.recurrence)
 
       #sidebar.four.wide.column
-        = render 'sidebar', action: :show, task: @task
+        = render 'sidebar', task: @task
 
 = render 'delete_modal'
