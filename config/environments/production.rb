@@ -78,4 +78,15 @@ Evry::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mandrillapp.com',
+    port:                 587,
+    domain:               '',
+    user_name:            'info@welaika.com',
+    password:             '7ba561b6-b173-49f8-86a8-17317007ccc8',
+    authentication:       'plain',
+    enable_starttls_auto: false  }
 end
+
