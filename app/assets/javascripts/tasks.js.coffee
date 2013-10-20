@@ -2,19 +2,18 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).ready ->
+ready = ->
   $('.popup').tipr()
 
   $(".delete_button").click (event) ->
-    event.preventDefault()
+    $(".basic.modal").modal("setting", "onDeny", ->
+      console.log "denied deletion"
+      false
+    ).modal("setting", "onApprove", ->
+      console.log "delete task" 
+      true
+    ).modal "show"
 
-    href = $(this).attr('href')
-
-    console.log href
-
-    # $(".basic.modal").modal("setting", "onDeny", ->
-    #   console.log "denied deletion of " + task_id
-    # ).modal("setting", "onApprove", ->
-    #   console.log "delete task " + task_id
-    # ).modal "show"
-    # false
+$(ready)
+$(document).on('page:load', ready)
+  
