@@ -26,11 +26,11 @@ tour =
     placement: "bottom"
   ]
   onEnd: ->
-    $.cookie('tour','1')
+    $.cookie('tour',true)
 
 $(document).ready ->
   if $(".newtask").length > 0
-    if (window.user_sign_count < 1) and (typeof $.cookie('tour') is 'undefined')
-      # Start the tour!
+    if (window.user_sign_count < 2) and ($.cookie('tour') is null)
+      console.log "Start the tour!"
       hopscotch.startTour tour
 

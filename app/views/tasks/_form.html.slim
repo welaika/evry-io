@@ -16,7 +16,7 @@
     .ui.massive.input
       = t.input_field :action, placeholder: "Cleaning the Room", value: task.action
 
-  button type="submit" class="ui teal submit right floated button" data-buttonspinner=''
+  button type="submit" class="ui teal submit right floated button" data-buttonspinner='' id="submit-form-button"
     - if action == :new
       | Create Task
     - elsif action == :show
