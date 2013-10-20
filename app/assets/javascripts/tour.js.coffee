@@ -6,7 +6,7 @@ tour =
   showCloseButton: true
   steps: [
     title: "Welcome to Every.io!"
-    content: "Every.io makes easy to handle cyclical ToDo tasks! In this field you need to describe when your event occurs."
+    content: "In this field you need to describe when your event occurs."
     target: "task_time_expression"
     placement: "right"
   ,
@@ -18,21 +18,37 @@ tour =
     title: "Remind me!"
     content: "After pushing this button, Every.io will remind you each time. Totally free."
     target: "submit-form-button"
-    placement: "right"
+    placement: "left"
   ,
     title: "My reminders"
-    content: "You can find all your reminders simply clicking in this menu. When you want. Where you want."
-    target: "task-list-menu"
-    placement: "bottom"
+    content: "You can find all your reminders with every information you need"
+    target: "list-task-table"
+    placement: "top"
+  ,
+    title: "When Evry.io will notify me?"
+    content: "For each notification can you know when Evry.io will notify you!"
+    target: "next-reminder-column" 
+    placement: "top"
+  ,
+    title: "Change a reminder"
+    content: "For each reminder you can delete or edit it"
+    target: "actions-column" 
+    placement: "top"
+  ,
+    title: "To the next notification"
+    content: "When you finished a notification, check it! Evry.io will notify you with the new updated date!"
+    target: "check-column" 
+    placement: "right" 
   ]
   onEnd: ->
     $.cookie('tour',true)
 
 ready = ->
-  if $(".newtask").length > 0
+  if $(".taskindex").length > 0
     if (window.user_sign_count < 2) and ($.cookie('tour') is null)
       console.log "Start the tour!"
       hopscotch.startTour tour
+    #hopscotch.startTour tour
 
 $(ready)
 $(document).on('page:load', ready)

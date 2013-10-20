@@ -18,18 +18,20 @@
                 .ui.field.input
                   = t.input_field :action, placeholder: "clean the room"
               .two.wide.right.aligned.column
-                button class="ui small teal button" data-buttonspinner=""
+                button class="ui small teal button" data-buttonspinner="" id="submit-form-button"
                   | Create
 
     .row
       .twelve.wide.column
-        table.ui.table.segment
+        table.ui.table.segment id="list-task-table"
           thead
             tr
-              th
+              th id="check-column"
               th.nine.wide Description
-              th.four.wide Next Reminder
-              th.three.wide Actions
+              th.four.wide id="next-reminder-column"
+                | Next Reminder
+              th.three.wide id="actions-column"
+                | Actions
           tbody.tasks
             - @tasks.each do |task|
               = render 'single_task', task: task
