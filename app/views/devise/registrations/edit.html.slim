@@ -18,8 +18,6 @@
             .ui.left.labeled.icon.input
               = f.input_field :email, placeholder: "Your email"
               i.mail.icon
-              .ui.corner.label
-                i.icon.asterisk
           - if devise_mapping.confirmable? && resource.pending_reconfirmation?
             p
               | Currently waiting confirmation for:
@@ -29,15 +27,11 @@
             .ui.left.labeled.icon.input
               = f.input_field :password, placeholder: "Choose a password"
               i.lock.icon
-              .ui.corner.label
-                i.icon.asterisk
           .field
             = f.label :password_confirmation
             .ui.left.labeled.icon.input
               = f.input_field :password_confirmation, placeholder: "Confirm your password"
               i.lock.icon
-              .ui.corner.label
-                i.icon.asterisk
           .field
             = f.label :current_password
             .ui.left.labeled.icon.input
