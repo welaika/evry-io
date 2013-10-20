@@ -19,6 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 
+set :output, '/var/www/apps/railsrumble/shared/log/cron.log'
+
 every 1.minute do
   rake "handle_recurrences:perform"
 end

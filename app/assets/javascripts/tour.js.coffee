@@ -28,6 +28,7 @@ tour =
 
 $(document).ready ->
   if $(".newtask").length > 0
-    if window.user_sign_count < 1
+    if window.user_sign_count <= 1
       # Start the tour!
       hopscotch.startTour tour
+
