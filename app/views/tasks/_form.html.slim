@@ -3,17 +3,18 @@
     .header= task.error_notification
 
   .field
-    = task.label :action
-    .ui.input
-      = task.input_field :action, placeholder: ""
+    .ui.massive.input
+      = task.input_field :time_expression, placeholder: "When"
       .ui.corner.label
         i.icon.asterisk
   .field
-    = task.label :time_expression
-    .ui.input
-      = task.input_field :time_expression
+    p
+      | I want to
+  .field
+    .ui.massive.input
+      = task.input_field :action, placeholder: "Action"
       .ui.corner.label
         i.icon.asterisk
 
-  = task.button :submit, "Create Task", class: 'ui teal submit button'
+  = task.button :submit, "Remind me!", class: 'ui teal submit button'
 
