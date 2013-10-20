@@ -15,4 +15,5 @@
  *= require tipr
  *= require hopstoch
  *= require common
+ *= require_tree .
  */
