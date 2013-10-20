@@ -13,5 +13,6 @@
         .item= ui_button "Logout", destroy_user_session_path, "red logout", method: :delete
 
   - else
-    .right.item= ui_button "Sign In", new_user_session_path, "teal"
+    .right.menu
+      .item= ui_button "Sign In", new_user_session_path, "teal"
 
