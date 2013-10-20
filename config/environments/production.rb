@@ -88,7 +88,6 @@ Evry::Application.configure do
     password:             '7ba561b6-b173-49f8-86a8-17317007ccc8',
     authentication:       'plain',
     enable_starttls_auto: false  }
-  config.action_mailer.default_url_options = { :host => 'evry.io' }
 
 end
 
