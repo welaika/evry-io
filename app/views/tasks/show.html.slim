@@ -22,17 +22,10 @@
             tbody
               tr
                 td.field Last reminder
-                td.value
-                  - if @task.recurrence.last_at
-                    span.popup data-tip="16 November 2013"
-                      = distance_of_time_in_words(Time.now, @task.recurrence.next_at)
-                  - else
-                    span Not yet reminded
+                td.value= recurrence_human_last_at(@task.recurrence)
               tr
                 td.field Next reminder in
-                td.value
-                  span.popup data-tip="#{@task.recurrence.next_at.strftime('%d %B %Y')}"
-                    = distance_of_time_in_words(Time.now, @task.recurrence.next_at)
+                td.value= recurrence_human_next_at(@task.recurrence)
 
       .four.wide.column
         = render 'sidebar', action: :show

@@ -19,14 +19,15 @@
                 td
                   a.set_task_state
                     i.large.empty.checkbox.icon
+
                 td.description
                   = link_to task do
                     =' task.time_expression 
                     em I want to 
                     = task.action
-                td
-                  span.popup[data-tip="#{task.recurrence.next_at.strftime('%d %B %Y')}"]
-                    = distance_of_time_in_words(Time.now, task.recurrence.next_at)
+
+                td= recurrence_human_next_at(task.recurrence)
+
                 td
                   a.delete_button heref="#"
                     i.large.remove.icon
