@@ -1,4 +1,4 @@
-- action ||= :index
+- action = controller.action_name.to_sym
 - task ||= { id: nil }
 
 - if action == :index

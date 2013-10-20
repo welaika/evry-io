@@ -1,20 +1,23 @@
-.ui.form = simple_form_for @task do |task|
-  .ui.error.message
-    .header= task.error_notification
+- action = controller.action_name.to_sym
 
+- if action == :new
+  - options = {}
+- elsif action == :show
+  - options = { remote: true }
+
+.ui.form = simple_form_for task, options do |t|
+  = 
   .field
     .ui.massive.input
-      = task.input_field :time_expression, placeholder: "Every"
-      .ui.corner.label
-        i.icon.asterisk
+      = t.input_field :time_expression, placeholder: "Every monday of the month", value: task.time_expression
   .field
-    p
-      | I want to
+    p I want to
   .field
     .ui.massive.input
-      = task.input_field :action, placeholder: "Action"
-      .ui.corner.label
-        i.icon.asterisk
+      = t.input_field :action, placeholder: "Cleaning the Room", value: task.action
 
-  = task.button :submit, "Remind me!", class: 'ui teal submit button', id:'submit-form-button'
-
+  button type="submit" class="ui teal submit right floated button" data-buttonspinner=''
+    - if action == :new
+      | Create Task
+    - elsif action == :show
+      | Update Task
