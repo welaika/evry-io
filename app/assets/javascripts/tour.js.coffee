@@ -38,7 +38,7 @@ tour =
     title: "To the next notification"
     content: "When a notification has expired, you can reschedule it and Evry.io will notify you with the new updated date!"
     target: "check-column" 
-    placement: "right" 
+    placement: "left" 
   ]
   onEnd: ->
     $.cookie('tour', true)
@@ -48,7 +48,7 @@ ready = ->
     if (window.user_sign_count < 2) and ($.cookie('tour') is null)
       console.log "Start the tour!"
       hopscotch.startTour tour
-    # hopscotch.startTour tour
+    hopscotch.startTour tour
 
 $(ready)
 $(document).on('page:load', ready)
