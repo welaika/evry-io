@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def save_user_time_zone
-    if cookies["user_time_zone"].present? && ( current_user.time_zone.blank? || current_user.is_guest? )
+    if cookies["user_time_zone"].present? && current_user.time_zone.blank?
       current_user.update_attribute(:time_zone, cookies["user_time_zone"])
     end
   end
