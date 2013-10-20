@@ -1,6 +1,7 @@
 body
   background: #FCFCFC image-url("bright_squares.png") repeat
   font-family: 'Source Sans Pro', sans-serif
+  padding-bottom: 40px // fix for rumble "vote us"
   text-shadow: 1px 1px white
 
 ::-moz-selection
@@ -73,7 +74,7 @@ blockquote
   footer.ui.segment
     margin-top: 3rem
     font-weight: lighter
-
+    
     a
       color: white
       font-weight: normal
@@ -84,6 +85,12 @@ blockquote
 
     .copyright
       font-size: 16px
+      
+    .social
+      a:hover
+        i
+          opacity: 1
+          text-decoration: none
 
   header
     .column
@@ -155,15 +162,3 @@ blockquote
     margin-bottom: 1rem
     .column
       padding: 0
-
-  footer.ui.segment
-    margin-top: 3rem
-
-    .social
-      a:hover
-        i
-          opacity: 1
-          text-decoration: none
-
-
-
