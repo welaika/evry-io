@@ -3,6 +3,17 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = ->
+
+  $(".rotate_words").textrotator
+    animation: "fade"
+    separator: ","
+    speed: 2000
+
+  $(".rotate_words2").textrotator
+    animation: "fade"
+    separator: ","
+    speed: 3000
+
   $('.popup').tipr()
 
   $(".delete_button").click (event) ->
