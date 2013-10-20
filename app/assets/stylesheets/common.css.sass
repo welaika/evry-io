@@ -61,16 +61,18 @@ blockquote
 
     .slogan
       p
-        font-size: 42px
         line-height: 50px
         margin: auto auto 0em
         span
           color: #FF7038
           font-weight: bold
-          font-size: 48px
 
-    .or
+    .computer .or
       height: 2em
+    .tablet .or
+      height: 1.5em
+    .mobile .or
+      height: 1em
 
   .ui.feature-list,
   .ui.sign-up
@@ -180,3 +182,41 @@ blockquote
     margin-bottom: 1rem
     .column
       padding: 0
+
+/* Mobile Only */
+@media only screen and (max-width: 768px)
+  .mobile.only
+    display: block !important
+    
+  .hero .slogan
+    height: 260px
+    
+  .taskshow 
+    .row
+      width: 100%
+      .twelve.wide
+        width: 100% !important
+
+@media only screen and (min-width: 768px)
+  .mobile.only
+    display: none
+
+/* Tablet Only */
+@media only screen and (min-width: 768px) and (max-width: 998px)
+  .tablet.only
+    display: block !important
+  
+  .hero .slogan
+    height: 260px
+    
+@media only screen and (max-width: 768px), (min-width: 998px)
+  .tablet.only
+    display: none
+
+/* Computer Only */
+@media only screen and (min-width: 998px)
+  .computer.only
+    display: block !important
+@media only screen and (max-width: 998px)
+  .computer.only
+    display: none
