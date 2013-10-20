@@ -8,6 +8,12 @@ describe Task do
   context "using repository" do
     let(:attributes) { build_attributes_for(:task) }
 
+    class TimeZoneConverter
+      def self.convert(moment, user)
+        moment
+      end
+    end
+
     before do
       @now = Time.local(2013, 10, 19, 0, 0, 0)
       Timecop.freeze(@now)
