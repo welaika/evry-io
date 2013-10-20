@@ -28,5 +28,22 @@ ready = ->
 
     false
 
+  $('.set_task_state').click (event) ->
+    event.preventDefault()
+
+    console.log $(@)
+    $this = $(@)
+    $task = $this.parents('.task')
+    $icon = $('i', $this)
+    $recurrence = $task.find('.recurrence span')
+
+    $task.toggleClass('done')
+
+    if $task.hasClass('done')
+      $icon.removeClass('empty').addClass('checked')
+      $recurrence.text('Not planned')
+    else
+      $icon.removeClass('checked').addClass('empty')
+
 $(ready)
 $(document).on('page:load', ready)

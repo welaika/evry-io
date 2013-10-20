@@ -7,7 +7,8 @@ tr.task[data-task-id="#{task.id}"]
   td.description
     = link_to task_summary(task), task
 
-  td= recurrence_human_next_at(task.recurrence)
+  td.recurrence
+    = recurrence_human_next_at(task.recurrence)
 
   td
     = ui_icon_only_link "large remove", task, method: :delete, remote: true, class: "delete_button"
