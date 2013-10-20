@@ -89,5 +89,7 @@ Evry::Application.configure do
     authentication:       'plain',
     enable_starttls_auto: false  }
 
+  config.action_mailer.asset_host = 'http://evry.io'
+
 end
 
