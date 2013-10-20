@@ -1,5 +1,6 @@
 title Evry.io - Manage your recurring reminders
 
+= airbrake_javascript_notifier
 link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"
 = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
 = javascript_include_tag "application", "data-turbolinks-track" => true
@@ -8,3 +9,4 @@ link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,30
 - if user_signed_in?
   javascript:
     var user_sign_count = "#{@current_user.sign_in_count}";
+

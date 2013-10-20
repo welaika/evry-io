@@ -22,6 +22,7 @@ gem 'omniauth-github'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'whenever', :require => false
 gem 'newrelic_rpm'
+gem 'airbrake'
 
 # assets
 gem 'sass-rails', '~> 4.0.0'
