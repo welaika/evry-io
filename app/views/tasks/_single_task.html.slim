@@ -11,5 +11,5 @@ tr.task[data-task-id="#{task.id}"]
     = ui_icon_only_link "large remove", task, method: :delete, remote: true, class: "delete_button"
     = ui_icon_only_link 'large edit', task, class: 'edit_button'
   td
-    a.set_task_state[data-task-id="#{task.id}"]
+    = link_to schedule_task_url(task), remote: true, class: "set_task_state", data: { "task-id" => task.id } do
       i.large.ok.circle.checkbox.icon

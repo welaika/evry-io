@@ -14,7 +14,9 @@ Evry::Application.routes.draw do
       get :mail_report
     end
     member do
-      get :duplicate, :mail_notification
+      get :duplicate
+      get :mail_notification
+      get :schedule
     end
   end
 end

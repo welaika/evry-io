@@ -5,3 +5,4 @@ hide_flashes()
 <% flash.discard %>
 
 $('.taskindex table tbody').append("<%= escape_javascript render 'single_task', task: @task %>")
+tasksReady()

@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   inherit_resources
 
   respond_to :html
-  respond_to :js, only: [ :create, :update, :destroy ]
+  respond_to :js, only: [ :create, :update, :destroy, :schedule ]
 
   def create
     @task = CreateTask.create(params[:task].merge(user_id: current_user.id))
@@ -47,6 +47,11 @@ class TasksController < ApplicationController
 
   def mail_notification
     render '/recurrence_mailer/notify', layout: false
+  end
+
+  def schedule
+    @task = Task.find(params[:id])
+    SyncTaskRecurrence.new(@task).perform
   end
 end
 

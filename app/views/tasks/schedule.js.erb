@@ -1,0 +1,3 @@
+$('<%= "tr.task[data-task-id=#{@task.id}]" %>').replaceWith("<%= escape_javascript render 'single_task', task: @task %>");
+tasksReady()
+

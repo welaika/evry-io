@@ -2,8 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-ready = ->
-
+tasksReady = ->
   $(".rotate_words").textrotator
     animation: "fade"
     separator: ","
@@ -45,5 +44,7 @@ ready = ->
     else
       $icon.removeClass('checked').addClass('empty')
 
-$(ready)
-$(document).on('page:load', ready)
+$(tasksReady)
+$(document).on('page:load', tasksReady)
+window.tasksReady = tasksReady
+
