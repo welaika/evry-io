@@ -10,6 +10,7 @@ class SyncTaskRecurrence < Struct.new(:task)
         until_at: result.until
       })
     else
+      task.destroy
       task.errors.add :time_expression,
         I18n.t('activerecord.errors.models.task.attributes.time_expression.parse_failed')
     end
