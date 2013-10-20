@@ -17,6 +17,7 @@
 //= require jquery.detect_timezone
 //= require jquery.cookie
 //= require jquery.simple-text-rotator
+//= require jquery.quovolver
 //= require tipr.min
 //= require hopscotch
 //= require spin.min

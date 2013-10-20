@@ -8,6 +8,33 @@
         input type="text" placeholder="Search..."
         i.search.icon
     = vertical_menu_icon_link 'New task', 'add', new_task_path
+    .item.examples
+      p.title
+        | Do you need a task?
+      blockquote
+        p
+          | Every day 
+          i 
+            |  I want to 
+          |  clean my room perfectly
+      blockquote
+        p
+          | Every week 
+          i 
+            |  I want to 
+          |  go to the gym
+      blockquote
+        p
+          | Every 3 months 
+          i 
+            |  I want to 
+          |  donate my blood
+      blockquote
+        p
+          | Every 3 weeks 
+          i 
+            |  I want to 
+          |  read a new book
 -elsif action == :show
   .ui.vertical.menu data-task-id="#{task.id}"
     a.item.fork_button href="#{duplicate_task_path}"

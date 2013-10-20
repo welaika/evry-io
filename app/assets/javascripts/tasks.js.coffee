@@ -16,6 +16,8 @@ ready = ->
 
   $('.popup').tipr()
 
+  $('blockquote').quovolver()
+
   $(".delete_button").click (event) ->
     $(".basic.modal").modal("setting", "onDeny", =>
       console.log "denied deletion"
