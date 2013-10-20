@@ -48,7 +48,7 @@ ready = ->
     if (window.user_sign_count < 2) and ($.cookie('tour') is null)
       console.log "Start the tour!"
       hopscotch.startTour tour
-    hopscotch.startTour tour
+    #hopscotch.startTour tour
 
 $(ready)
 $(document).on('page:load', ready)
