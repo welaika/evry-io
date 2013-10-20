@@ -7,7 +7,7 @@
           = resource_name.to_s.humanize
   .row
     .sixteen.wide.column
-      .ui.two.column.grid.segment.stackable
+      .ui.two.column.grid.segment
         .ui.column.basic.segment= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: "ui form" }) do |f|
           .ui.error.message
             .header
@@ -46,8 +46,7 @@
               .ui.corner.label
                 i.icon.asterisk
           = f.button :submit, "Update you Account", class: 'ui orange submit large button right floated'
-        .ui.vertical.divider.computer.tablet.only
-        .ui.orizontal.divider.mobile.only
+        .ui.vertical.divider
         .ui.column
           .ui.basic.segment
             h3.epsilon Cancel my account

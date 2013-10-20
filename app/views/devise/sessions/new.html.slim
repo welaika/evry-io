@@ -1,4 +1,4 @@
-.ui.grid.stackable
+.ui.grid
   header.row
     .sixteen.wide.column
       .ui.segment
@@ -20,17 +20,9 @@
                 ' try it! 
         .row
           .sixteen.wide.center.aligned.column
-            .ui.buttons.computer.only
+            .ui.buttons
               = ui_button "Sign Up", new_user_registration_path, "orange medium"
               .or
               = ui_button "Try It", "#", "green medium"
-            .ui.buttons.tablet.only
-              = ui_button "Sign Up", new_user_registration_path, "orange medium"
-              .or
-              = ui_button "Try It", "#", "green medium"
-            .ui.buttons.mobile.only
-              = ui_button "Sign Up", new_user_registration_path, "orange small"
-              .or
-              = ui_button "Try It", "#", "green small"
 
 = render "devise/shared/links"

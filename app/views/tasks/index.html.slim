@@ -3,7 +3,7 @@
       .sixteen.wide.column
         .ui.segment
           = simple_form_for @task, html: { class: "natural-language", remote: true, novalidate: '' } do |t|
-            .ui.grid.stackable
+            .ui.grid
               .six.wide.column
                 .ui.field.input
                   = t.input_field :time_expression, placeholder: "Every month"
@@ -34,7 +34,7 @@
 
         = paginate @tasks
 
-      #sidebar.four.wide.column.computer.tablet.only
+      #sidebar.four.wide.column
         = render 'sidebar', action: :index
 
 = render 'delete_modal'
