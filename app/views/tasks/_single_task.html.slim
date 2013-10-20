@@ -1,6 +1,6 @@
 - task ||= {}
 
-tr.task[data-task-id="#{task.id}"]
+tr.task data-task-id="#{task.id}" class=task_scheduled_class(task)
   td.description
     = link_to task_summary(task), task
 

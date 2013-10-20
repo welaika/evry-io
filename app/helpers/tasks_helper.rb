@@ -8,4 +8,8 @@ module TasksHelper
     truncate(result, length: 50)
   end
 
+  def task_scheduled_class(task)
+    'not-scheduled' unless task.recurrence.try(:next_at)
+  end
+
 end
