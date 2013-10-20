@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
-  inherit_resources
+  before_filter :authenticate_user!
+
   load_and_authorize_resource
+  inherit_resources
 
   respond_to :html
   respond_to :js, only: [ :create, :update, :destroy ]

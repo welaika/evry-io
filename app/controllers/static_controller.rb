@@ -1,6 +1,10 @@
 class StaticController < ApplicationController
   def welcome
-    render 'welcome', layout: 'homepage'
+    if user_signed_in?
+      redirect_to tasks_url
+    else
+      render 'welcome', layout: 'homepage'
+    end
   end
 
   def logged
