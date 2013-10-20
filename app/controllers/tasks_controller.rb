@@ -20,5 +20,17 @@ class TasksController < ApplicationController
   def index
     @tasks = @tasks.limit(10)
   end
+
+  def duplicate
+    task = Task.find(params[:id])
+
+    if task
+      @task = Task.new(action: task.action, time_expression: task.time_expression)
+      render "new"
+    else
+      flash[:alert] = "Can't duplicate not existing task"
+      redirect_to tasks_url
+    end
+  end
 end
 

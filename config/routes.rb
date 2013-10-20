@@ -9,6 +9,10 @@ Evry::Application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: "omniauth_callbacks" }
 
-  resources :tasks
+  resources :tasks do
+    member do
+      get :duplicate
+    end
+  end
 end
 
