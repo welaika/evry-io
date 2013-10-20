@@ -20,6 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 
 every 1.minute do
-  runner 'HandleRecurrences.new.perform'
+  rake "handle_recurrences:perform"
 end
 
