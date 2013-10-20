@@ -2,10 +2,6 @@
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
   box-sizing: border-box
-.homepage *, .homepage *:before, .homepage *:after
-  -moz-box-sizing: content-box
-  -webkit-box-sizing: content-box
-  box-sizing: content-box
 
 body
   background: #FCFCFC image-url("bright_squares.png") repeat
@@ -83,10 +79,13 @@ blockquote
   .ui.sign-up
     margin-top: 3rem
     
+  .ui.buttons *, .ui.buttons *:before, .ui.buttons *:after
+    -moz-box-sizing: content-box !important
+    -webkit-box-sizing: content-box !important
+    box-sizing: content-box !important
   .ui.buttons
     input, button
       margin: 0
-      font-family: 'Source Sans Pro', sans-serif
 
   footer.ui.segment
     margin-top: 3rem
