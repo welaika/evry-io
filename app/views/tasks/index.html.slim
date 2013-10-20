@@ -24,9 +24,9 @@
               th.nine.wide Description
               th.four.wide id="next-reminder-column"
                 | Next Reminder
-              th.three.wide id="actions-column"
+              th.three.wide.actions id="actions-column"
                 | Actions
-              th id="check-column"
+              th.complete id="check-column"
                 | Complete
           tbody.tasks
             - @tasks.each do |task|
