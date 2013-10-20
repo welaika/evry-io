@@ -14,6 +14,12 @@
   text-shadow: 1px 1px black
 
 .ui
+  /* browsers require these rules separate */
+  &.input input::-webkit-input-placeholder
+    color: #aaa !important
+  &.input input::-moz-placeholder,
+    color: #aaa !important
+
   &.button
     +gray-text-shadow()
     &.black
@@ -41,6 +47,8 @@
       .image
         display: inline
 
+  &.basic.segment:first-child
+    padding-top: 1em !important
 
   &.black.disabled .button,
   &.black.disabled.button
