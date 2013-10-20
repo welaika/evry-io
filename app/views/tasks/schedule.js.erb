@@ -1,4 +1,5 @@
 var single_task = "<%= escape_javascript render partial: 'single_task', locals: { task: @task } %>";
 $('<%= "tr.task[data-task-id=#{@task.id}]" %>').replaceWith(single_task);
-tasksReady();
 
+$("#task-notifications").replaceWith("<%= escape_javascript render 'tasks/notifications', task: @task %>");
+tasksReady();

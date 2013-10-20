@@ -1,0 +1,12 @@
+#task-notifications
+  table.ui.basic.table.notifications
+    tbody
+      tr
+        td.field Last reminder
+        td.value= recurrence_human_last_at(task.recurrence)
+      tr
+        td.field Next reminder in
+        td.value= recurrence_human_next_at(task.recurrence)
+
+  = ui_button "Complete", schedule_task_path(task), 'teal floated right', remote: true
+

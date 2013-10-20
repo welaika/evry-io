@@ -10,14 +10,7 @@
           = render 'form', task: @task
           .ui.horizontal.clearing.icon.divider
             i.circular.calendar.icon
-          table.ui.basic.table.notifications
-            tbody
-              tr
-                td.field Last reminder
-                td.value= recurrence_human_last_at(@task.recurrence)
-              tr
-                td.field Next reminder in
-                td.value= recurrence_human_next_at(@task.recurrence)
+          = render 'notifications', task: @task
 
       #sidebar.four.wide.column
         = render 'sidebar', task: @task

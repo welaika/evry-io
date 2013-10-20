@@ -3,3 +3,6 @@ $('form [data-buttonspinner]').buttonspinner('stop')
 $('#flash').replaceWith("<%= escape_javascript render 'flash_messages' %>")
 hide_flashes()
 <% flash.discard %>
+
+$("#task-notifications").replaceWith("<%= escape_javascript render 'tasks/notifications', task: @task %>");
+$('.popup').tipr()
