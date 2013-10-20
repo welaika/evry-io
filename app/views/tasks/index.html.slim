@@ -26,12 +26,13 @@
         table.ui.table.segment id="list-task-table"
           thead
             tr
-              th id="check-column"
               th.nine.wide Description
               th.four.wide id="next-reminder-column"
                 | Next Reminder
               th.three.wide id="actions-column"
                 | Actions
+              th id="check-column"
+                | Done?
           tbody.tasks
             - @tasks.each do |task|
               = render 'single_task', task: task
