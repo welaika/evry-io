@@ -39,5 +39,14 @@ class TasksController < ApplicationController
       redirect_to tasks_url
     end
   end
+
+  def mail_report
+    @tasks = @tasks.by_next_at.includes(:recurrence)
+    render '/recurrence_mailer/report', layout: false
+  end
+
+  def mail_notification
+    render '/recurrence_mailer/notify', layout: false
+  end
 end
 

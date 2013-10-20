@@ -1,11 +1,10 @@
 = render "recurrence_mailer/stylesheet"
-- task = @task
 
 #content
   .padded
     #read-on-website
       ' This email not displaying correctly?
-      = link_to "Just click here!", mail_notification_task_url(task)
+      = link_to "Just click here!", mail_report_tasks_url
 
     table#mail-header
       tr
@@ -21,17 +20,17 @@
                 td.timestamp Latest updated at 
 
     #at-a-glance
-      h3 Task recurrence notification
+      h3 All your tasks, at a glance
       table
         tr.legend
           td
           td Next schedule
-
-        tr.folder
-          td.label
-            table: tr
-              td.task= link_to task_summary(task), task_url(task)
-          td.next_at= recurrence_human_next_at(task.recurrence)
+        - @tasks.each do |task|
+          tr.folder
+            td.label
+              table: tr
+                td.task= link_to task_summary(task), task_url(task)
+            td.next_at= recurrence_human_next_at(task.recurrence)
 
   #footer
     ' Done with ♥ by
