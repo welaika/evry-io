@@ -83,7 +83,7 @@ Evry::Application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.mandrillapp.com',
     port:                 587,
-    domain:               '',
+    domain:               'evry.io',
     user_name:            'info@welaika.com',
     password:             '7ba561b6-b173-49f8-86a8-17317007ccc8',
     authentication:       'plain',
