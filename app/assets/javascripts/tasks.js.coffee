@@ -12,10 +12,10 @@ $(document).ready ->
 
     $(".basic.modal").modal("setting", "onDeny", ->
       console.log "denied"
-      alert "Denied to delete id task " + task
+      alert "Denied to delete id task " + task_id
     ).modal("setting", "onApprove", ->
       console.log "approved"
-      alert "Approved to delete id task " + task
+      alert "Approved to delete id task " + task_id
     ).modal "show"
     false
 
