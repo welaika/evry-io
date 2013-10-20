@@ -10,8 +10,8 @@
           thead
             tr
               th
-              th.eleven.wide Description
-              th.two.wide Next Reminder
+              th.nine.wide Description
+              th.four.wide Next Reminder
               th.three.wide Actions
           tbody.tasks
             - @tasks.each do |task|
@@ -20,16 +20,10 @@
                   a.set_task_state
                     i.large.empty.checkbox.icon
                 td.description
-                  = link_to task do
-                    =' task.time_expression 
-                    em I want to 
-                    = task.action
+                  = link_to task_summary(task), task
 
                 td= recurrence_human_next_at(task.recurrence)
 
-                td
-                  span.popup[data-tip="#{task.recurrence.next_at.strftime('%d %B %Y')}"]
-                    = distance_of_time_in_words(Time.now, task.recurrence.next_at)
                 td
                   a.delete_button href="#{task_path(task.id)}"
                     i.large.remove.icon

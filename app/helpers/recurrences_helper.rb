@@ -12,7 +12,7 @@ module RecurrencesHelper
 
     if date.present?
       content_tag :span, class: "popup", data: { tip: human_date(date) } do
-        distance_of_time_in_words(Time.now, date)
+        distance_of_time_in_words(Time.zone.now, date)
       end
     else
       content_tag :span do
