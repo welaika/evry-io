@@ -21,19 +21,20 @@
                 td.timestamp Latest updated at 
 
     #at-a-glance
-      h3 Task recurrence notification
+      h3 You should do your task now!
       table
         tr.legend
           td
-          td Next schedule
+          td Last schedule
 
         tr.folder
           td.label
             table: tr
               td.task= link_to task_summary(task), task_url(task)
-          td.next_at= recurrence_human_next_at(task.recurrence)
+          td.last_at= recurrence_human_last_at(task.recurrence)
 
   #footer
-    ' Done with ♥ by
+    a href="http://evry.io" Evry.io
+    '  crafted with ♥ by the fine folks at 
     a href="http://dev.welaika.com" weLaika
 
