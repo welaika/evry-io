@@ -11,24 +11,21 @@ module ApplicationHelper
   end
 
   def flash_floating_class
-    {
-      notice: "info",
-      alert: "error"
-    }
+    Hash.new("error").merge({
+      notice: "info"
+    })
   end
 
   def flash_icon_class
-    {
-      notice: "ok sign",
-      alert: "warning"
-    }
+    Hash.new("warning").merge({
+      notice: "ok sign teal"
+    })
   end
 
   def flash_header_message
-    {
-      notice: "Success",
-      alert: "Whoops! Something went wrong!"
-    }
+    Hash.new("Whoops, something went wrong!").merge({
+      notice: "Success!"
+    })
   end
 
   def vertical_menu_icon_link(title, icon, url, options = {})
