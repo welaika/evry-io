@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :provider, :uid
 
+  has_many :tasks, dependent: :destroy
+
   include ActiveRecordHelpers
 end
 
