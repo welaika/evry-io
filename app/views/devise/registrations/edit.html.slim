@@ -1,0 +1,81 @@
+/ <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+/ <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+/   <%= f.error_notification %>
+
+/   <div class="form-inputs">
+/     <%= f.input :email, :required => true, :autofocus => true %>
+
+/     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+/       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+/     <% end %>
+
+/     <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false %>
+/     <%= f.input :password_confirmation, :required => false %>
+/     <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
+/   </div>
+
+/   <div class="form-actions">
+/     <%= f.button :submit, "Update" %>
+/   </div>
+/ <% end %>
+
+/ <h3>Cancel my account</h3>
+
+/ <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+
+/ <%= link_to "Back", :back %>
+
+.ui.grid
+  header.row
+    .sixteen.wide.column
+      .ui.segment
+        h1.gamma
+          | Edit 
+          = resource_name.to_s.humanize
+  .row
+    .sixteen.wide.column
+      .ui.two.column.grid.segment
+        .ui.column.basic.segment= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, class: "ui form" }) do |f|
+          .ui.error.message
+            .header
+              = devise_error_messages!
+
+          .field
+            = f.label :email, required: true, :autofocus => true 
+            .ui.left.labeled.icon.input
+              = f.input_field :email, placeholder: "Your email"
+              i.mail.icon
+              .ui.corner.label
+                i.icon.asterisk
+          - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+            p
+              | Currently waiting confirmation for:
+              = resource.unconfirmed_email
+          .field
+            = f.label :password
+            .ui.left.labeled.icon.input
+              = f.input_field :password, required: true, placeholder: "Choose a password"
+              i.lock.icon
+              .ui.corner.label
+                i.icon.asterisk
+          .field
+            = f.label :password_confirmation
+            .ui.left.labeled.icon.input
+              = f.input_field :password_confirmation, required: true, placeholder: "Confirm your password"
+              i.lock.icon
+              .ui.corner.label
+                i.icon.asterisk
+          .field
+            = f.label :current_password
+            .ui.left.labeled.icon.input
+              = f.input_field :current_password, required: true, placeholder: "Your current password", :hint => "we need your current password to confirm your changes"
+              i.lock.icon
+              .ui.corner.label
+                i.icon.asterisk
+          = f.button :submit, "Update you Account", class: 'ui orange submit large button right floated'
+        .ui.vertical.divider Or
+        .ui.column
+          h3 Cancel my account
+          p Unhappy? 
+          p = link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure? This action can't be undone." }, :method => :delete, class: 'ui fluid negative button'
