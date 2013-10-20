@@ -14,7 +14,7 @@
               = devise_error_messages!
 
           .field
-            = f.label :email, required: true, :autofocus => true 
+            = f.label :email, :autofocus => true 
             .ui.left.labeled.icon.input
               = f.input_field :email, placeholder: "Your email"
               i.mail.icon
@@ -27,21 +27,21 @@
           .field
             = f.label :password
             .ui.left.labeled.icon.input
-              = f.input_field :password, required: true, placeholder: "Choose a password"
+              = f.input_field :password, placeholder: "Choose a password"
               i.lock.icon
               .ui.corner.label
                 i.icon.asterisk
           .field
             = f.label :password_confirmation
             .ui.left.labeled.icon.input
-              = f.input_field :password_confirmation, required: true, placeholder: "Confirm your password"
+              = f.input_field :password_confirmation, placeholder: "Confirm your password"
               i.lock.icon
               .ui.corner.label
                 i.icon.asterisk
           .field
             = f.label :current_password
             .ui.left.labeled.icon.input
-              = f.input_field :current_password, required: true, placeholder: "Your current password"
+              = f.input_field :current_password, placeholder: "Your current password"
               i.lock.icon
               .ui.corner.label
                 i.icon.asterisk
