@@ -23,5 +23,11 @@ ready = ->
 
   $('blockquote').quovolver()
 
+  $('form').on 'click', '#try_it', (event) ->
+    event.preventDefault()
+    event.stopPropagation()
+    $(@).parents('form').find('input[type="submit"]').trigger('click')
+
+
 $(ready)
 $(document).on('page:load', ready)

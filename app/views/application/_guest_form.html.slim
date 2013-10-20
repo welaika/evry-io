@@ -1,10 +1,11 @@
 - dimension ||= ''
 
-= form_tag new_user_session_path do
+= form_tag new_user_session_path, class: "guest_form" do
   = hidden_field_tag "authenticity_token", form_authenticity_token
   = hidden_field_tag "user[email]", "evry.guest@mailinator.com"
   = hidden_field_tag "user[password]", "gu3st1s4w3s0m3"
+  = submit_tag "Try It", id: "guest_perform_login"
   .ui.buttons class="#{dimension}"
     = ui_button "Sign Up", new_user_registration_path, "orange medium"
     .or
-    = submit_tag "Try It", class: "ui green medium button"
+    = ui_button "Try It", "", "green medium", id: "try_it"
