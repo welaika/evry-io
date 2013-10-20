@@ -4,5 +4,12 @@ namespace :handle_recurrences do
     HandleRecurrences.perform
   end
 
+  task daemon: :environment do
+    while true
+      sleep 10
+      HandleRecurrences.perform
+    end
+  end
+
 end
 
