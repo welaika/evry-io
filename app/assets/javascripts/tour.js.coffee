@@ -26,29 +26,29 @@ tour =
     placement: "top"
   ,
     title: "When Evry.io will notify me?"
-    content: "For each notification can you know when Evry.io will notify you!"
+    content: "For each notification you know when Evry.io will notify you!"
     target: "next-reminder-column" 
     placement: "top"
   ,
     title: "Change a reminder"
-    content: "For each reminder you can delete or edit it"
+    content: "For each reminder you can delete, edit or reschedule it"
     target: "actions-column" 
     placement: "top"
   ,
     title: "To the next notification"
-    content: "When you finished a notification, check it! Evry.io will notify you with the new updated date!"
+    content: "When a notification has expired, you can reschedule it and Evry.io will notify you with the new updated date!"
     target: "check-column" 
     placement: "right" 
   ]
   onEnd: ->
-    $.cookie('tour',true)
+    $.cookie('tour', true)
 
 ready = ->
   if $(".taskindex").length > 0
     if (window.user_sign_count < 2) and ($.cookie('tour') is null)
       console.log "Start the tour!"
       hopscotch.startTour tour
-    #hopscotch.startTour tour
+    # hopscotch.startTour tour
 
 $(ready)
 $(document).on('page:load', ready)
