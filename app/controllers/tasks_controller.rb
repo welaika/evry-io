@@ -7,10 +7,6 @@ class TasksController < ApplicationController
   respond_to :html
   respond_to :js, only: [ :create, :update, :destroy ]
 
-  def index
-    @tasks = @tasks.limit(10)
-  end
-
   def create
     @task = CreateTask.create(params[:task].merge(user_id: current_user.id))
     if @task.errors.present?
@@ -28,7 +24,7 @@ class TasksController < ApplicationController
   end
 
   def index
-    @tasks = @tasks.page(params[:page])
+    @tasks = @tasks.by_next_at.page(params[:page])
     @task = Task.new
   end
 
