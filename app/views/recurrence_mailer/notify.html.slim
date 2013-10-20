@@ -1,13 +1,6 @@
 = render "recurrence_mailer/stylesheet"
 - task = @task
 
-div itemscope="" itemtype="http://schema.org/EmailMessage"
-  meta content="Reschedule task" itemprop="description"
-  div itemprop="action" itemscope="" itemtype="http://schema.org/ConfirmAction"
-    meta content="Reschedule task" itemprop="name"
-    div itemprop="handler" itemscope="" itemtype="http://schema.org/HttpActionHandler"
-      link itemprop="url" href="#{schedule_task_url(task)}"
-
 #content
   .padded
     #read-on-website
